@@ -9,24 +9,24 @@
     <meta name="generator" content="Retype 3.7.0">
 
     <!-- Primary Meta Tags -->
-    <title>lxz</title>
-    <meta name="title" content="lxz">
-    <meta name="description" content="LXZ is a library with an amalgamation of several compression libraries, including LZMA, ZLIB, ZSTD and more.">
+    <title>buffer</title>
+    <meta name="title" content="buffer">
+    <meta name="description" content="A universal handler for dealing with streams, buffer data and large computable data. This can be used to perform arithmetic, bitwise, stacks or even...">
 
     <!-- Canonical -->
-    <link rel="canonical" href="/lxz/">
+    <link rel="canonical" href="/buffer/">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="/lxz/">
-    <meta property="og:title" content="lxz">
-    <meta property="og:description" content="LXZ is a library with an amalgamation of several compression libraries, including LZMA, ZLIB, ZSTD and more.">
+    <meta property="og:url" content="/buffer/">
+    <meta property="og:title" content="buffer">
+    <meta property="og:description" content="A universal handler for dealing with streams, buffer data and large computable data. This can be used to perform arithmetic, bitwise, stacks or even...">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="/lxz/">
-    <meta property="twitter:title" content="lxz">
-    <meta property="twitter:description" content="LXZ is a library with an amalgamation of several compression libraries, including LZMA, ZLIB, ZSTD and more.">
+    <meta property="twitter:url" content="/buffer/">
+    <meta property="twitter:title" content="buffer">
+    <meta property="twitter:description" content="A universal handler for dealing with streams, buffer data and large computable data. This can be used to perform arithmetic, bitwise, stacks or even...">
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
@@ -149,27 +149,14 @@
                                 <!-- Rendered if sidebar right is enabled -->
                                 <div id="docs-sidebar-right-toggle"></div>
                                 <!-- Page content  -->
-<doc-anchor-target id="lxz" class="break-words">
+<doc-anchor-target id="buffer" class="break-words">
     <h1>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#lxz">#</doc-anchor-trigger>
-        <span>lxz</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#buffer">#</doc-anchor-trigger>
+        <span>buffer</span>
     </h1>
 </doc-anchor-target>
-<p>LXZ is a library with an amalgamation of several compression libraries, including LZMA, ZLIB, ZSTD and more.<br />
-You can view more about them on their github: 
-<div class="mb-6 px-5 py-4 flex justify-between relative border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded transition-colors duration-150">
-    <div class="flex items-center text-blue-500 dark:text-blue-400">
-        <span class="inline-block mb-px">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" role="presentation" fill="currentColor"><path fill="none" d="M0 0h24v24H0z"/><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z"/></svg>
-        </span>
-        <span class="inline-block font-medium ml-2">bxzstr Github</span>
-    </div>
-    <div class="flex items-center text-xs text-gray-400 dark:text-dark-400">
-        <span>https://github.com/tmaklin/bxzstr</span>
-    </div>
-    <a href="https://github.com/tmaklin/bxzstr" target="_blank" class="absolute block inset-0"></a>
-</div>
-</p>
+<p>A universal handler for dealing with streams, buffer data and large computable data.<br />
+This can be used to perform arithmetic, bitwise, stacks or even consumers.</p>
 <hr>
 <doc-anchor-target id="functions">
     <h2>
@@ -178,145 +165,473 @@ You can view more about them on their github:
     </h2>
 </doc-anchor-target>
 <div style="opacity: 0; height: 0; width: 0; overflow: hidden; pointer-events: auto;">
-<doc-anchor-target id="lxzencodezinput-string-async-functionoutput-string-string">
+<doc-anchor-target id="buffernewdata-number--string--buffer-buffer">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#lxzencodezinput-string-async-functionoutput-string-string">#</doc-anchor-trigger>
-        <span>lxz.encode.z(input: string, async?: function(output: string)): string?</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#buffernewdata-number--string--buffer-buffer">#</doc-anchor-trigger>
+        <span>buffer.new(data?: number[] | string | buffer): buffer</span>
     </h3>
 </doc-anchor-target>
 </div>
 <code class="language-typescript" style="text-align:center; font-size:16px; white-space:pre-wrap; word-break:break-word;">
-lxz.encode.z(input: string, async?: function(output: string)): string?
+buffer.new(data?: number[] | string | buffer): buffer
 </code>
 <ul>
-<li>Compresses the input string using ZLIB compression.</li>
+<li>Creates a new buffer class.</li>
+</ul>
+<hr>
+<doc-anchor-target id="basics">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#basics">#</doc-anchor-trigger>
+        <span>Basics</span>
+    </h2>
+</doc-anchor-target>
+<div style="opacity: 0; height: 0; width: 0; overflow: hidden; pointer-events: auto;">
+<doc-anchor-target id="buffersize-number">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#buffersize-number">#</doc-anchor-trigger>
+        <span>buffer:size(): number</span>
+    </h3>
+</doc-anchor-target>
+</div>
+<code class="language-typescript" style="text-align:center; font-size:16px; white-space:pre-wrap; word-break:break-word;">
+buffer:size(): number
+</code>
+<ul>
+<li>Gets the allocated size of the buffer.</li>
+<li>Size is relative to how much data the buffer must use to keep relevant data.</li>
 </ul>
 <div style="opacity: 0; height: 0; width: 0; overflow: hidden; pointer-events: auto;">
-<doc-anchor-target id="lxzencodezstdinput-string-async-functionoutput-string-string">
+<doc-anchor-target id="bufferpeekidx-number-number">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#lxzencodezstdinput-string-async-functionoutput-string-string">#</doc-anchor-trigger>
-        <span>lxz.encode.zstd(input: string, async?: function(output: string)): string?</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#bufferpeekidx-number-number">#</doc-anchor-trigger>
+        <span>buffer:peek(idx: number): number</span>
     </h3>
 </doc-anchor-target>
 </div>
 <code class="language-typescript" style="text-align:center; font-size:16px; white-space:pre-wrap; word-break:break-word;">
-lxz.encode.zstd(input: string, async?: function(output: string)): string?
+buffer:peek(idx: number): number
 </code>
 <ul>
-<li>Compresses the input string using Zstandard (ZSTD) compression.</li>
+<li>Gets a byte out of the buffer without deleting it.</li>
 </ul>
 <div style="opacity: 0; height: 0; width: 0; overflow: hidden; pointer-events: auto;">
-<doc-anchor-target id="lxzencodebz2input-string-async-functionoutput-string-string">
+<doc-anchor-target id="bufferinsertidx-number-value-number">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#lxzencodebz2input-string-async-functionoutput-string-string">#</doc-anchor-trigger>
-        <span>lxz.encode.bz2(input: string, async?: function(output: string)): string?</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#bufferinsertidx-number-value-number">#</doc-anchor-trigger>
+        <span>buffer:insert(idx: number, value: number...)</span>
     </h3>
 </doc-anchor-target>
 </div>
 <code class="language-typescript" style="text-align:center; font-size:16px; white-space:pre-wrap; word-break:break-word;">
-lxz.encode.bz2(input: string, async?: function(output: string)): string?
+buffer:insert(idx: number, value: number...)
 </code>
 <ul>
-<li>Compresses the input string using Bzip2 (BZ2) compression.</li>
+<li>Inserts bytes into the buffer.</li>
 </ul>
 <div style="opacity: 0; height: 0; width: 0; overflow: hidden; pointer-events: auto;">
-<doc-anchor-target id="lxzencodelzmainput-string-async-functionoutput-string-string">
+<doc-anchor-target id="bufferpushvalue-number">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#lxzencodelzmainput-string-async-functionoutput-string-string">#</doc-anchor-trigger>
-        <span>lxz.encode.lzma(input: string, async?: function(output: string)): string?</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#bufferpushvalue-number">#</doc-anchor-trigger>
+        <span>buffer:push(value: number...)</span>
     </h3>
 </doc-anchor-target>
 </div>
 <code class="language-typescript" style="text-align:center; font-size:16px; white-space:pre-wrap; word-break:break-word;">
-lxz.encode.lzma(input: string, async?: function(output: string)): string?
+buffer:push(value: number...)
 </code>
 <ul>
-<li>Compresses the input string using LZMA (Lempel-Ziv-Markov chain algorithm).</li>
+<li>Pushes bytes into the buffer at the start.</li>
 </ul>
 <div style="opacity: 0; height: 0; width: 0; overflow: hidden; pointer-events: auto;">
-<doc-anchor-target id="lxzencodeglzmainput-string-async-functionoutput-string-string">
+<doc-anchor-target id="bufferpush_backvalue-number">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#lxzencodeglzmainput-string-async-functionoutput-string-string">#</doc-anchor-trigger>
-        <span>lxz.encode.glzma(input: string, async?: function(output: string)): string?</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#bufferpush_backvalue-number">#</doc-anchor-trigger>
+        <span>buffer:push_back(value: number...)</span>
     </h3>
 </doc-anchor-target>
 </div>
 <code class="language-typescript" style="text-align:center; font-size:16px; white-space:pre-wrap; word-break:break-word;">
-lxz.encode.glzma(input: string, async?: function(output: string)): string?
+buffer:push_back(value: number...)
 </code>
 <ul>
-<li>Compresses the input string using Garry&#x27;s LZMA.</li>
+<li>Pushes bytes into the buffer at the end.</li>
 </ul>
 <div style="opacity: 0; height: 0; width: 0; overflow: hidden; pointer-events: auto;">
-<doc-anchor-target id="lxzdecodezinput-string-async-functionoutput-string-string">
+<doc-anchor-target id="bufferremoveidx-number-number">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#lxzdecodezinput-string-async-functionoutput-string-string">#</doc-anchor-trigger>
-        <span>lxz.decode.z(input: string, async?: function(output: string)): string?</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#bufferremoveidx-number-number">#</doc-anchor-trigger>
+        <span>buffer:remove(idx: number): number</span>
     </h3>
 </doc-anchor-target>
 </div>
 <code class="language-typescript" style="text-align:center; font-size:16px; white-space:pre-wrap; word-break:break-word;">
-lxz.decode.z(input: string, async?: function(output: string)): string?
+buffer:remove(idx: number): number
 </code>
 <ul>
-<li>Decompresses a ZLIB-compressed string.</li>
+<li>Removes and returns a byte from the buffer at an index.</li>
 </ul>
 <div style="opacity: 0; height: 0; width: 0; overflow: hidden; pointer-events: auto;">
-<doc-anchor-target id="lxzdecodezstdinput-string-async-functionoutput-string-string">
+<doc-anchor-target id="buffershift-number">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#lxzdecodezstdinput-string-async-functionoutput-string-string">#</doc-anchor-trigger>
-        <span>lxz.decode.zstd(input: string, async?: function(output: string)): string?</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#buffershift-number">#</doc-anchor-trigger>
+        <span>buffer:shift(): number</span>
     </h3>
 </doc-anchor-target>
 </div>
 <code class="language-typescript" style="text-align:center; font-size:16px; white-space:pre-wrap; word-break:break-word;">
-lxz.decode.zstd(input: string, async?: function(output: string)): string?
+buffer:shift(): number
 </code>
 <ul>
-<li>Decompresses a Zstandard (ZSTD) compressed string.</li>
+<li>Removes and returns a byte from the buffer from the front.</li>
 </ul>
 <div style="opacity: 0; height: 0; width: 0; overflow: hidden; pointer-events: auto;">
-<doc-anchor-target id="lxzdecodebz2input-string-async-functionoutput-string-string">
+<doc-anchor-target id="bufferpop-number">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#lxzdecodebz2input-string-async-functionoutput-string-string">#</doc-anchor-trigger>
-        <span>lxz.decode.bz2(input: string, async?: function(output: string)): string?</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#bufferpop-number">#</doc-anchor-trigger>
+        <span>buffer:pop(): number</span>
     </h3>
 </doc-anchor-target>
 </div>
 <code class="language-typescript" style="text-align:center; font-size:16px; white-space:pre-wrap; word-break:break-word;">
-lxz.decode.bz2(input: string, async?: function(output: string)): string?
+buffer:pop(): number
 </code>
 <ul>
-<li>Decompresses a Bzip2 (BZ2) compressed string.</li>
+<li>Removes and returns a byte from the buffer from the back.</li>
 </ul>
 <div style="opacity: 0; height: 0; width: 0; overflow: hidden; pointer-events: auto;">
-<doc-anchor-target id="lxzdecodelzmainput-string-async-functionoutput-string-string">
+<doc-anchor-target id="buffersubbeginning-number-ending-number-buffer">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#lxzdecodelzmainput-string-async-functionoutput-string-string">#</doc-anchor-trigger>
-        <span>lxz.decode.lzma(input: string, async?: function(output: string)): string?</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#buffersubbeginning-number-ending-number-buffer">#</doc-anchor-trigger>
+        <span>buffer:sub(beginning: number, ending?: number): buffer</span>
     </h3>
 </doc-anchor-target>
 </div>
 <code class="language-typescript" style="text-align:center; font-size:16px; white-space:pre-wrap; word-break:break-word;">
-lxz.decode.lzma(input: string, async?: function(output: string)): string?
+buffer:sub(beginning: number, ending?: number): buffer
 </code>
 <ul>
-<li>Decompresses an LZMA-compressed string.</li>
+<li>Gets a subset of the buffer based on the start and end positions.</li>
+</ul>
+<doc-anchor-target id="consumers">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#consumers">#</doc-anchor-trigger>
+        <span>Consumers</span>
+    </h2>
+</doc-anchor-target>
+<div style="opacity: 0; height: 0; width: 0; overflow: hidden; pointer-events: auto;">
+<doc-anchor-target id="bufferbytessize-number-buffer">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#bufferbytessize-number-buffer">#</doc-anchor-trigger>
+        <span>buffer:bytes(size: number): buffer</span>
+    </h3>
+</doc-anchor-target>
+</div>
+<code class="language-typescript" style="text-align:center; font-size:16px; white-space:pre-wrap; word-break:break-word;">
+buffer:bytes(size: number): buffer
+</code>
+<ul>
+<li>Gets a subset of the buffer while consuming the size requested.</li>
 </ul>
 <div style="opacity: 0; height: 0; width: 0; overflow: hidden; pointer-events: auto;">
-<doc-anchor-target id="lxzdecodeglzmainput-string-async-functionoutput-string-string">
+<doc-anchor-target id="bufferuint8-number">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#lxzdecodeglzmainput-string-async-functionoutput-string-string">#</doc-anchor-trigger>
-        <span>lxz.decode.glzma(input: string, async?: function(output: string)): string?</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#bufferuint8-number">#</doc-anchor-trigger>
+        <span>buffer:uint8(): number</span>
     </h3>
 </doc-anchor-target>
 </div>
 <code class="language-typescript" style="text-align:center; font-size:16px; white-space:pre-wrap; word-break:break-word;">
-lxz.decode.glzma(input: string, async?: function(output: string)): string?
+buffer:uint8(): number
 </code>
 <ul>
-<li>Decompresses a Garry&#x27;s LZMA-compressed string.</li>
+<li>Gets &amp; consumes an unsigned integer of size 8</li>
 </ul>
+<div style="opacity: 0; height: 0; width: 0; overflow: hidden; pointer-events: auto;">
+<doc-anchor-target id="bufferuint8data-number">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#bufferuint8data-number">#</doc-anchor-trigger>
+        <span>buffer:uint8(data: number)</span>
+    </h3>
+</doc-anchor-target>
+</div>
+<code class="language-typescript" style="text-align:center; font-size:16px; white-space:pre-wrap; word-break:break-word;">
+buffer:uint8(data: number)
+</code>
+<ul>
+<li>Pushes back an unsigned integer of size 8</li>
+</ul>
+<div style="opacity: 0; height: 0; width: 0; overflow: hidden; pointer-events: auto;">
+<doc-anchor-target id="bufferuint8-number-1">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#bufferuint8-number-1">#</doc-anchor-trigger>
+        <span>buffer:uint8(): number</span>
+    </h3>
+</doc-anchor-target>
+</div>
+<code class="language-typescript" style="text-align:center; font-size:16px; white-space:pre-wrap; word-break:break-word;">
+buffer:int8(): number
+</code>
+<ul>
+<li>Gets &amp; consumes an integer of size 8</li>
+</ul>
+<div style="opacity: 0; height: 0; width: 0; overflow: hidden; pointer-events: auto;">
+<doc-anchor-target id="bufferint8data-number">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#bufferint8data-number">#</doc-anchor-trigger>
+        <span>buffer:int8(data: number)</span>
+    </h3>
+</doc-anchor-target>
+</div>
+<code class="language-typescript" style="text-align:center; font-size:16px; white-space:pre-wrap; word-break:break-word;">
+buffer:int8(data: number)
+</code>
+<ul>
+<li>Pushes back an integer of size 8</li>
+</ul>
+<div style="opacity: 0; height: 0; width: 0; overflow: hidden; pointer-events: auto;">
+<doc-anchor-target id="bufferuint16-number">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#bufferuint16-number">#</doc-anchor-trigger>
+        <span>buffer:uint16(): number</span>
+    </h3>
+</doc-anchor-target>
+</div>
+<code class="language-typescript" style="text-align:center; font-size:16px; white-space:pre-wrap; word-break:break-word;">
+buffer:uint16(): number
+</code>
+<ul>
+<li>Gets &amp; consumes an unsigned integer of size 16</li>
+</ul>
+<div style="opacity: 0; height: 0; width: 0; overflow: hidden; pointer-events: auto;">
+<doc-anchor-target id="bufferuint16data-number">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#bufferuint16data-number">#</doc-anchor-trigger>
+        <span>buffer:uint16(data: number)</span>
+    </h3>
+</doc-anchor-target>
+</div>
+<code class="language-typescript" style="text-align:center; font-size:16px; white-space:pre-wrap; word-break:break-word;">
+buffer:uint16(data: number)
+</code>
+<ul>
+<li>Pushes back an unsigned integer of size 16</li>
+</ul>
+<div style="opacity: 0; height: 0; width: 0; overflow: hidden; pointer-events: auto;">
+<doc-anchor-target id="bufferuint8-number-2">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#bufferuint8-number-2">#</doc-anchor-trigger>
+        <span>buffer:uint8(): number</span>
+    </h3>
+</doc-anchor-target>
+</div>
+<code class="language-typescript" style="text-align:center; font-size:16px; white-space:pre-wrap; word-break:break-word;">
+buffer:int16(): number
+</code>
+<ul>
+<li>Gets &amp; consumes an integer of size 16</li>
+</ul>
+<div style="opacity: 0; height: 0; width: 0; overflow: hidden; pointer-events: auto;">
+<doc-anchor-target id="bufferint16data-number">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#bufferint16data-number">#</doc-anchor-trigger>
+        <span>buffer:int16(data: number)</span>
+    </h3>
+</doc-anchor-target>
+</div>
+<code class="language-typescript" style="text-align:center; font-size:16px; white-space:pre-wrap; word-break:break-word;">
+buffer:int16(data: number)
+</code>
+<ul>
+<li>Pushes back an integer of size 16</li>
+</ul>
+<div style="opacity: 0; height: 0; width: 0; overflow: hidden; pointer-events: auto;">
+<doc-anchor-target id="bufferuint32-number">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#bufferuint32-number">#</doc-anchor-trigger>
+        <span>buffer:uint32(): number</span>
+    </h3>
+</doc-anchor-target>
+</div>
+<code class="language-typescript" style="text-align:center; font-size:16px; white-space:pre-wrap; word-break:break-word;">
+buffer:uint32(): number
+</code>
+<ul>
+<li>Gets &amp; consumes an unsigned integer of size 32</li>
+</ul>
+<div style="opacity: 0; height: 0; width: 0; overflow: hidden; pointer-events: auto;">
+<doc-anchor-target id="bufferuint32data-number">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#bufferuint32data-number">#</doc-anchor-trigger>
+        <span>buffer:uint32(data: number)</span>
+    </h3>
+</doc-anchor-target>
+</div>
+<code class="language-typescript" style="text-align:center; font-size:16px; white-space:pre-wrap; word-break:break-word;">
+buffer:uint32(data: number)
+</code>
+<ul>
+<li>Pushes back an unsigned integer of size 32</li>
+</ul>
+<div style="opacity: 0; height: 0; width: 0; overflow: hidden; pointer-events: auto;">
+<doc-anchor-target id="bufferuint32-number-1">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#bufferuint32-number-1">#</doc-anchor-trigger>
+        <span>buffer:uint32(): number</span>
+    </h3>
+</doc-anchor-target>
+</div>
+<code class="language-typescript" style="text-align:center; font-size:16px; white-space:pre-wrap; word-break:break-word;">
+buffer:int32(): number
+</code>
+<ul>
+<li>Gets &amp; consumes an integer of size 32</li>
+</ul>
+<div style="opacity: 0; height: 0; width: 0; overflow: hidden; pointer-events: auto;">
+<doc-anchor-target id="bufferint32data-number">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#bufferint32data-number">#</doc-anchor-trigger>
+        <span>buffer:int32(data: number)</span>
+    </h3>
+</doc-anchor-target>
+</div>
+<code class="language-typescript" style="text-align:center; font-size:16px; white-space:pre-wrap; word-break:break-word;">
+buffer:int32(data: number)
+</code>
+<ul>
+<li>Pushes back an integer of size 32</li>
+</ul>
+<div style="opacity: 0; height: 0; width: 0; overflow: hidden; pointer-events: auto;">
+<doc-anchor-target id="bufferuint64-number">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#bufferuint64-number">#</doc-anchor-trigger>
+        <span>buffer:uint64(): number</span>
+    </h3>
+</doc-anchor-target>
+</div>
+<code class="language-typescript" style="text-align:center; font-size:16px; white-space:pre-wrap; word-break:break-word;">
+buffer:uint64(): number
+</code>
+<ul>
+<li>Gets &amp; consumes an unsigned integer of size 64</li>
+</ul>
+<div style="opacity: 0; height: 0; width: 0; overflow: hidden; pointer-events: auto;">
+<doc-anchor-target id="bufferuint64data-number">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#bufferuint64data-number">#</doc-anchor-trigger>
+        <span>buffer:uint64(data: number)</span>
+    </h3>
+</doc-anchor-target>
+</div>
+<code class="language-typescript" style="text-align:center; font-size:16px; white-space:pre-wrap; word-break:break-word;">
+buffer:uint64(data: number)
+</code>
+<ul>
+<li>Pushes back an unsigned integer of size 64</li>
+</ul>
+<div style="opacity: 0; height: 0; width: 0; overflow: hidden; pointer-events: auto;">
+<doc-anchor-target id="bufferuint64-number-1">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#bufferuint64-number-1">#</doc-anchor-trigger>
+        <span>buffer:uint64(): number</span>
+    </h3>
+</doc-anchor-target>
+</div>
+<code class="language-typescript" style="text-align:center; font-size:16px; white-space:pre-wrap; word-break:break-word;">
+buffer:int64(): number
+</code>
+<ul>
+<li>Gets &amp; consumes an integer of size 64</li>
+</ul>
+<div style="opacity: 0; height: 0; width: 0; overflow: hidden; pointer-events: auto;">
+<doc-anchor-target id="bufferint64data-number">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#bufferint64data-number">#</doc-anchor-trigger>
+        <span>buffer:int64(data: number)</span>
+    </h3>
+</doc-anchor-target>
+</div>
+<code class="language-typescript" style="text-align:center; font-size:16px; white-space:pre-wrap; word-break:break-word;">
+buffer:int64(data: number)
+</code>
+<ul>
+<li>Pushes back an integer of size 64</li>
+</ul>
+<div style="opacity: 0; height: 0; width: 0; overflow: hidden; pointer-events: auto;">
+<doc-anchor-target id="bufferuleb128-number">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#bufferuleb128-number">#</doc-anchor-trigger>
+        <span>buffer:uleb128(): number</span>
+    </h3>
+</doc-anchor-target>
+</div>
+<code class="language-typescript" style="text-align:center; font-size:16px; white-space:pre-wrap; word-break:break-word;">
+buffer:uleb128(): number
+</code>
+<ul>
+<li>Gets &amp; consumes an unsigned integer of size 128</li>
+<li>This is a form of compression for large numbers</li>
+</ul>
+<div style="opacity: 0; height: 0; width: 0; overflow: hidden; pointer-events: auto;">
+<doc-anchor-target id="bufferuleb128data-number">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#bufferuleb128data-number">#</doc-anchor-trigger>
+        <span>buffer:uleb128(data: number)</span>
+    </h3>
+</doc-anchor-target>
+</div>
+<code class="language-typescript" style="text-align:center; font-size:16px; white-space:pre-wrap; word-break:break-word;">
+buffer:uleb128(data: number)
+</code>
+<ul>
+<li>Pushes back an unsigned integer of size 128</li>
+<li>This is a form of compression for large numbers</li>
+</ul>
+<doc-anchor-target id="arithmetic">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#arithmetic">#</doc-anchor-trigger>
+        <span>Arithmetic</span>
+    </h2>
+</doc-anchor-target>
+<div class="flex mb-6">
+    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-yellow-500"></div>
+    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
+        <div class="flex items-center ml-4 h-7">
+            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-yellow-500" width="22" height="22" viewBox="0 0 24 24" role="presentation">
+                <g fill="currentColor"><g>
+                    <path d="M22.48 15.59L14.01 1.45A2.968 2.968 0 0012.16.09c-.78-.19-1.58-.07-2.27.35-.41.25-.76.6-1.01 1.01v.01L.4 15.6c-.83 1.43-.33 3.27 1.1 4.1.45.26.95.4 1.48.4h16.95c.8-.01 1.55-.33 2.11-.9.56-.57.87-1.33.86-2.13a3.04 3.04 0 00-.42-1.48zm-1.87 2.21c-.19.19-.44.3-.69.3H2.99c-.17 0-.34-.05-.49-.13a.992.992 0 01-.37-1.35L10.6 2.48c.08-.14.2-.25.34-.33a.992.992 0 011.37.33l8.46 14.13c.09.15.13.32.13.49 0 .26-.1.51-.29.7z"></path>
+                    <path d="M11.45 12.1c.55 0 1-.45 1-1v-4c0-.55-.45-1-1-1s-1 .45-1 1v4c0 .56.45 1 1 1zM11.46 14.1c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
+                </g></g>
+            </svg>
+        </div>
+        <div class="pr-5 ml-3 w-full">
+            <h5>Under Construction</h5>
+<p>Currently still deciding the best course of action here...</p>
+        </div>
+    </div>
+</div>
+<doc-anchor-target id="bitwise">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#bitwise">#</doc-anchor-trigger>
+        <span>Bitwise</span>
+    </h2>
+</doc-anchor-target>
+<div class="flex mb-6">
+    <div class="shrink-0 w-1 rounded-tl rounded-bl bg-yellow-500"></div>
+    <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
+        <div class="flex items-center ml-4 h-7">
+            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-yellow-500" width="22" height="22" viewBox="0 0 24 24" role="presentation">
+                <g fill="currentColor"><g>
+                    <path d="M22.48 15.59L14.01 1.45A2.968 2.968 0 0012.16.09c-.78-.19-1.58-.07-2.27.35-.41.25-.76.6-1.01 1.01v.01L.4 15.6c-.83 1.43-.33 3.27 1.1 4.1.45.26.95.4 1.48.4h16.95c.8-.01 1.55-.33 2.11-.9.56-.57.87-1.33.86-2.13a3.04 3.04 0 00-.42-1.48zm-1.87 2.21c-.19.19-.44.3-.69.3H2.99c-.17 0-.34-.05-.49-.13a.992.992 0 01-.37-1.35L10.6 2.48c.08-.14.2-.25.34-.33a.992.992 0 011.37.33l8.46 14.13c.09.15.13.32.13.49 0 .26-.1.51-.29.7z"></path>
+                    <path d="M11.45 12.1c.55 0 1-.45 1-1v-4c0-.55-.45-1-1-1s-1 .45-1 1v4c0 .56.45 1 1 1zM11.46 14.1c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
+                </g></g>
+            </svg>
+        </div>
+        <div class="pr-5 ml-3 w-full">
+            <h5>Under Construction</h5>
+<p>Currently still deciding the best course of action here...</p>
+        </div>
+    </div>
+</div>
 <div hidden>
 <div class="codeblock-wrapper"><doc-codeblock>
 <pre class="language-typescript"><code v-pre class="language-typescript"></code></pre>
@@ -331,20 +646,20 @@ lxz.decode.glzma(input: string, async?: function(output: string)): string?
                             
                                 <nav class="flex mt-14">
                                     <div class="w-1/2">
-                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../iot/">
+                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../bit/">
                                             <svg xmlns="http://www.w3.org/2000/svg" class="mr-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19 11H7.41l5.29-5.29a.996.996 0 10-1.41-1.41l-7 7a1 1 0 000 1.42l7 7a1.024 1.024 0 001.42-.01.996.996 0 000-1.41L7.41 13H19c.55 0 1-.45 1-1s-.45-1-1-1z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                                             <span>
                                                 <span class="block text-xs font-normal text-gray-400 dark:text-dark-400">Previous</span>
-                                                <span class="block mt-1">iot</span>
+                                                <span class="block mt-1">bit</span>
                                             </span>
                                         </a>
                                     </div>
                             
                                     <div class="w-1/2">
-                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../math/">
+                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../coroutine/">
                                             <span>
                                                 <span class="block text-xs font-normal text-right text-gray-400 dark:text-dark-400">Next</span>
-                                                <span class="block mt-1">math</span>
+                                                <span class="block mt-1">coroutine</span>
                                             </span>
                                             <svg xmlns="http://www.w3.org/2000/svg" class="ml-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                                         </a>
@@ -388,6 +703,6 @@ lxz.decode.glzma(input: string, async?: function(output: string)): string?
 
     <div id="docs-overlay-target"></div>
 
-    <script data-cfasync="false">window.__DOCS__ = { "title": "lxz", level: 1, icon: "file", hasPrism: true, hasMermaid: false, hasMath: false, tocDepth: 23 }</script>
+    <script data-cfasync="false">window.__DOCS__ = { "title": "buffer", level: 1, icon: "file", hasPrism: true, hasMermaid: false, hasMath: false, tocDepth: 23 }</script>
 </body>
 </html>

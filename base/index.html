@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.7.0.800513001740">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.7.0.800545237891">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.7.0">
@@ -30,12 +30,12 @@
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../resources/css/retype.css?v=3.7.0.800513001740" rel="stylesheet">
+    <link href="../resources/css/retype.css?v=3.7.0.800545237891" rel="stylesheet">
 
-    <script data-cfasync="false" src="../resources/js/config.js?v=3.7.0.800513001740" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../resources/js/config.js?v=3.7.0.800545237891" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../resources/js/retype.js?v=3.7.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=3.7.0.800513001740" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../resources/js/prism.js?v=3.7.0.800513001740" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=3.7.0.800545237891" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../resources/js/prism.js?v=3.7.0.800545237891" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -182,15 +182,15 @@
     </h2>
 </doc-anchor-target>
 <div style="opacity: 0; height: 0; width: 0; overflow: hidden; pointer-events: auto;">
-<doc-anchor-target id="baseassertv-any-message-string-any">
+<doc-anchor-target id="assertv-any-message-string-any">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#baseassertv-any-message-string-any">#</doc-anchor-trigger>
-        <span>base.assert(v: any, message?: string): any</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#assertv-any-message-string-any">#</doc-anchor-trigger>
+        <span>assert(v: any, message?: string): any</span>
     </h3>
 </doc-anchor-target>
 </div>
 <code class="language-typescript" style="text-align:center; font-size:16px; white-space:pre-wrap; word-break:break-word;">
-base.assert(v: any, message?: string)
+assert(v: any, message?: string)
 </code>
 <ul>
 <li>Raises an error if value of v is nil or false.</li>
@@ -198,15 +198,15 @@ base.assert(v: any, message?: string)
 <li>If no error, returns the value v.</li>
 </ul>
 <div style="opacity: 0; height: 0; width: 0; overflow: hidden; pointer-events: auto;">
-<doc-anchor-target id="basecollectgarbageopt-string-arg-any-number">
+<doc-anchor-target id="collectgarbageopt-string-arg-any-number">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#basecollectgarbageopt-string-arg-any-number">#</doc-anchor-trigger>
-        <span>base.collectgarbage(opt: string, arg?: any): number?</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#collectgarbageopt-string-arg-any-number">#</doc-anchor-trigger>
+        <span>collectgarbage(opt: string, arg?: any): number?</span>
     </h3>
 </doc-anchor-target>
 </div>
 <code class="language-typescript" style="text-align:center; font-size:16px; white-space:pre-wrap; word-break:break-word;">
-base.collectgarbage(opt: string, arg?: any): number?
+collectgarbage(opt: string, arg?: any): number?
 </code>
 <ul>
 <li>Responsible for controlling and retrieving information about Lua&#x27;s garbage collector.</li>
@@ -221,94 +221,94 @@ base.collectgarbage(opt: string, arg?: any): number?
 &quot;setstepmul&quot;: sets arg/100 as the new value for the step multiplier of the collector (see below).</code></pre>
 </doc-codeblock></div>
 <div style="opacity: 0; height: 0; width: 0; overflow: hidden; pointer-events: auto;">
-<doc-anchor-target id="baseerrormessage-string-level-number">
+<doc-anchor-target id="errormessage-string-level-number">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#baseerrormessage-string-level-number">#</doc-anchor-trigger>
-        <span>base.error(message: string, level?: number)</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#errormessage-string-level-number">#</doc-anchor-trigger>
+        <span>error(message: string, level?: number)</span>
     </h3>
 </doc-anchor-target>
 </div>
 <code class="language-typescript" style="text-align:center; font-size:16px; white-space:pre-wrap; word-break:break-word;">
-base.error(message: string, level?: number)
+error(message: string, level?: number)
 </code>
 <ul>
 <li>Raises an error with the supplied message.</li>
 <li>If a level is supplied the error points to the current function (level 1 or nil), the parent function (level 2) and so on.</li>
 </ul>
 <div style="opacity: 0; height: 0; width: 0; overflow: hidden; pointer-events: auto;">
-<doc-anchor-target id="basegcinfo">
+<doc-anchor-target id="gcinfo">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#basegcinfo">#</doc-anchor-trigger>
-        <span>base.gcinfo()</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#gcinfo">#</doc-anchor-trigger>
+        <span>gcinfo()</span>
     </h3>
 </doc-anchor-target>
 </div>
 <code class="language-typescript" style="text-align:center; font-size:16px; white-space:pre-wrap; word-break:break-word;">
-base.gcinfo()
+gcinfo()
 </code>
 <ul>
 <li>Returns Kb of dynamic memory in use.</li>
 </ul>
 <code class="language-typescript" style="text-align:center; font-size:16px; white-space:pre-wrap; word-break:break-word;">
-base.error(message: string, level?: number)
+error(message: string, level?: number)
 </code>
 <ul>
 <li>Raises an error with the supplied message.</li>
 <li>If a level is supplied the error points to the current function (level 1 or nil), the parent function (level 2) and so on.</li>
 </ul>
 <div style="opacity: 0; height: 0; width: 0; overflow: hidden; pointer-events: auto;">
-<doc-anchor-target id="basegetfenvf-number--function-table">
+<doc-anchor-target id="getfenvf-number--function-table">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#basegetfenvf-number--function-table">#</doc-anchor-trigger>
-        <span>base.getfenv(f: number | function): table</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#getfenvf-number--function-table">#</doc-anchor-trigger>
+        <span>getfenv(f: number | function): table</span>
     </h3>
 </doc-anchor-target>
 </div>
 <code class="language-typescript" style="text-align:center; font-size:16px; white-space:pre-wrap; word-break:break-word;">
-base.getfenv(f: number | function): table
+getfenv(f: number | function): table
 </code>
 <ul>
 <li>Returns the current environment used by the nominated function f.</li>
 <li>f can be a function or a number representing the stack level, where 1 is the currently running function, 2 is its parent and so on.</li>
 </ul>
 <div style="opacity: 0; height: 0; width: 0; overflow: hidden; pointer-events: auto;">
-<doc-anchor-target id="basegetmetatableobj-table--function--userdata-table">
+<doc-anchor-target id="getmetatableobj-table--function--userdata-table">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#basegetmetatableobj-table--function--userdata-table">#</doc-anchor-trigger>
-        <span>base.getmetatable(obj: table | function | userdata): table?</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#getmetatableobj-table--function--userdata-table">#</doc-anchor-trigger>
+        <span>getmetatable(obj: table | function | userdata): table?</span>
     </h3>
 </doc-anchor-target>
 </div>
 <code class="language-typescript" style="text-align:center; font-size:16px; white-space:pre-wrap; word-break:break-word;">
-base.getmetatable(obj: table | function | userdata): table?
+getmetatable(obj: table | function | userdata): table?
 </code>
 <ul>
 <li>Returns metatable for the nominated object.</li>
 </ul>
 <div style="opacity: 0; height: 0; width: 0; overflow: hidden; pointer-events: auto;">
-<doc-anchor-target id="baseipairst-table-function-table-number">
+<doc-anchor-target id="ipairst-table-function-table-number">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#baseipairst-table-function-table-number">#</doc-anchor-trigger>
-        <span>base.ipairs(t: table): function, table, number</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#ipairst-table-function-table-number">#</doc-anchor-trigger>
+        <span>ipairs(t: table): function, table, number</span>
     </h3>
 </doc-anchor-target>
 </div>
 <code class="language-typescript" style="text-align:center; font-size:16px; white-space:pre-wrap; word-break:break-word;">
-base.ipairs(t: table): function, table, number
+ipairs(t: table): function, table, number
 </code>
 <ul>
 <li>Returns an iterator function, the table t, and 0, for use in the generic &quot;for&quot; loop.</li>
 </ul>
 <div style="opacity: 0; height: 0; width: 0; overflow: hidden; pointer-events: auto;">
-<doc-anchor-target id="basenextt-table-i-index-any-any">
+<doc-anchor-target id="nextt-table-i-index-any-any">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#basenextt-table-i-index-any-any">#</doc-anchor-trigger>
-        <span>base.next(t: table, i?: index): any, any</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#nextt-table-i-index-any-any">#</doc-anchor-trigger>
+        <span>next(t: table, i?: index): any, any</span>
     </h3>
 </doc-anchor-target>
 </div>
 <code class="language-typescript" style="text-align:center; font-size:16px; white-space:pre-wrap; word-break:break-word;">
-base.next(t: table, i?: index): any, any
+next(t: table, i?: index): any, any
 </code>
 <ul>
 <li>Traverses all entries in a table.</li>
@@ -317,115 +317,115 @@ base.next(t: table, i?: index): any, any
 <li>When called with the last index of the table (or with an index of nil for an empty table), returns nil.</li>
 </ul>
 <div style="opacity: 0; height: 0; width: 0; overflow: hidden; pointer-events: auto;">
-<doc-anchor-target id="basepairst-table-function-table-any">
+<doc-anchor-target id="pairst-table-function-table-any">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#basepairst-table-function-table-any">#</doc-anchor-trigger>
-        <span>base.pairs(t: table): function, table, any?</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#pairst-table-function-table-any">#</doc-anchor-trigger>
+        <span>pairs(t: table): function, table, any?</span>
     </h3>
 </doc-anchor-target>
 </div>
 <code class="language-typescript" style="text-align:center; font-size:16px; white-space:pre-wrap; word-break:break-word;">
-base.pairs(t: table): function, table, any?
+pairs(t: table): function, table, any?
 </code>
 <ul>
 <li>Returns the &#x27;next&#x27; function, the table t, and nil, for use in a for loop.</li>
 </ul>
 <div style="opacity: 0; height: 0; width: 0; overflow: hidden; pointer-events: auto;">
-<doc-anchor-target id="basepcallf-function--any-boolean-string--any-any">
+<doc-anchor-target id="pcallf-function--any-boolean-string--any-any">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#basepcallf-function--any-boolean-string--any-any">#</doc-anchor-trigger>
-        <span>base.pcall(f: function, ...: any): boolean, string | any, ...any</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#pcallf-function--any-boolean-string--any-any">#</doc-anchor-trigger>
+        <span>pcall(f: function, ...: any): boolean, string | any, ...any</span>
     </h3>
 </doc-anchor-target>
 </div>
 <code class="language-typescript" style="text-align:center; font-size:16px; white-space:pre-wrap; word-break:break-word;">
-base.pcall(f: function, ...: any): boolean, string | any, ...any
+pcall(f: function, ...: any): boolean, string | any, ...any
 </code>
 <ul>
 <li>Calls function f with the supplied arguments in protected mode.</li>
 <li>Catches errors and returns.</li>
 </ul>
 <div style="opacity: 0; height: 0; width: 0; overflow: hidden; pointer-events: auto;">
-<doc-anchor-target id="baseprint-any">
+<doc-anchor-target id="print-any">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#baseprint-any">#</doc-anchor-trigger>
-        <span>base.print(...: any)</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#print-any">#</doc-anchor-trigger>
+        <span>print(...: any)</span>
     </h3>
 </doc-anchor-target>
 </div>
 <code class="language-typescript" style="text-align:center; font-size:16px; white-space:pre-wrap; word-break:break-word;">
-base.print(...: any)
+print(...: any)
 </code>
 <ul>
 <li>Prints its arguments to stdout</li>
 </ul>
 <div style="opacity: 0; height: 0; width: 0; overflow: hidden; pointer-events: auto;">
-<doc-anchor-target id="baserawequalv1-any-v2-any-boolean">
+<doc-anchor-target id="rawequalv1-any-v2-any-boolean">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#baserawequalv1-any-v2-any-boolean">#</doc-anchor-trigger>
-        <span>base.rawequal(v1: any, v2: any): boolean</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#rawequalv1-any-v2-any-boolean">#</doc-anchor-trigger>
+        <span>rawequal(v1: any, v2: any): boolean</span>
     </h3>
 </doc-anchor-target>
 </div>
 <code class="language-typescript" style="text-align:center; font-size:16px; white-space:pre-wrap; word-break:break-word;">
-base.rawequal(v1: any, v2: any): boolean
+rawequal(v1: any, v2: any): boolean
 </code>
 <ul>
 <li>Returns a boolean depending on v1 == v2 without invoking any table metamethods.</li>
 </ul>
 <div style="opacity: 0; height: 0; width: 0; overflow: hidden; pointer-events: auto;">
-<doc-anchor-target id="baserawgett-table-i-any-any">
+<doc-anchor-target id="rawgett-table-i-any-any">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#baserawgett-table-i-any-any">#</doc-anchor-trigger>
-        <span>base.rawget(t: table, i: any): any</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#rawgett-table-i-any-any">#</doc-anchor-trigger>
+        <span>rawget(t: table, i: any): any</span>
     </h3>
 </doc-anchor-target>
 </div>
 <code class="language-typescript" style="text-align:center; font-size:16px; white-space:pre-wrap; word-break:break-word;">
-base.rawget(t: table, i: any): any
+rawget(t: table, i: any): any
 </code>
 <ul>
 <li>Gets the real value of table [index] without invoking metamethods.</li>
 </ul>
 <div style="opacity: 0; height: 0; width: 0; overflow: hidden; pointer-events: auto;">
-<doc-anchor-target id="baserawsett-table-i-any-v-any">
+<doc-anchor-target id="rawsett-table-i-any-v-any">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#baserawsett-table-i-any-v-any">#</doc-anchor-trigger>
-        <span>base.rawset(t: table, i: any, v: any)</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#rawsett-table-i-any-v-any">#</doc-anchor-trigger>
+        <span>rawset(t: table, i: any, v: any)</span>
     </h3>
 </doc-anchor-target>
 </div>
 <code class="language-typescript" style="text-align:center; font-size:16px; white-space:pre-wrap; word-break:break-word;">
-base.rawset(t: table, i: any, v: any)
+rawset(t: table, i: any, v: any)
 </code>
 <ul>
 <li>Sets the value of table [index] to value, without invoking metamethods.</li>
 </ul>
 <div style="opacity: 0; height: 0; width: 0; overflow: hidden; pointer-events: auto;">
-<doc-anchor-target id="baseselectindex-string--number--any-any">
+<doc-anchor-target id="selectindex-string--number--any-any">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#baseselectindex-string--number--any-any">#</doc-anchor-trigger>
-        <span>base.select(index: string | number, ...: any): ...any</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#selectindex-string--number--any-any">#</doc-anchor-trigger>
+        <span>select(index: string | number, ...: any): ...any</span>
     </h3>
 </doc-anchor-target>
 </div>
 <code class="language-typescript" style="text-align:center; font-size:16px; white-space:pre-wrap; word-break:break-word;">
-base.select(index: string | number, ...: any): ...any
+select(index: string | number, ...: any): ...any
 </code>
 <ul>
 <li>If index is a number, returns all items in the list from that number onwards.</li>
 <li>Otherwise index must be the string &quot;#&quot;, in which case it returns the number of items in the list.</li>
 </ul>
 <div style="opacity: 0; height: 0; width: 0; overflow: hidden; pointer-events: auto;">
-<doc-anchor-target id="basesetfenvf-number--userdata--thread--function-env-table">
+<doc-anchor-target id="setfenvf-number--userdata--thread--function-env-table">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#basesetfenvf-number--userdata--thread--function-env-table">#</doc-anchor-trigger>
-        <span>base.setfenv(f: number | userdata | thread | function, env: table)</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#setfenvf-number--userdata--thread--function-env-table">#</doc-anchor-trigger>
+        <span>setfenv(f: number | userdata | thread | function, env: table)</span>
     </h3>
 </doc-anchor-target>
 </div>
 <code class="language-typescript" style="text-align:center; font-size:16px; white-space:pre-wrap; word-break:break-word;">
-base.setfenv(f: number | userdata | thread | function, env: table)
+setfenv(f: number | userdata | thread | function, env: table)
 </code>
 <ul>
 <li>Sets the current environment to be used by f, which can be a function, userdata, thread or stack level.</li>
@@ -434,15 +434,15 @@ base.setfenv(f: number | userdata | thread | function, env: table)
 <li>The &quot;env&quot; argument is a table, which effectively becomes the &quot;root&quot; for the environment.</li>
 </ul>
 <div style="opacity: 0; height: 0; width: 0; overflow: hidden; pointer-events: auto;">
-<doc-anchor-target id="basesetmetatablet-table-metatable-table-table">
+<doc-anchor-target id="setmetatablet-table-metatable-table-table">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#basesetmetatablet-table-metatable-table-table">#</doc-anchor-trigger>
-        <span>base.setmetatable(t: table, metatable: table): table</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#setmetatablet-table-metatable-table-table">#</doc-anchor-trigger>
+        <span>setmetatable(t: table, metatable: table): table</span>
     </h3>
 </doc-anchor-target>
 </div>
 <code class="language-typescript" style="text-align:center; font-size:16px; white-space:pre-wrap; word-break:break-word;">
-base.setmetatable(t: table, metatable: table): table
+setmetatable(t: table, metatable: table): table
 </code>
 <ul>
 <li>Sets the metatable for the nominated table.</li>
@@ -450,15 +450,15 @@ base.setmetatable(t: table, metatable: table): table
 <li>If the original metatable has a &quot;__metatable&quot; entry an error is raised.</li>
 </ul>
 <div style="opacity: 0; height: 0; width: 0; overflow: hidden; pointer-events: auto;">
-<doc-anchor-target id="basetonumberv-number--string-base-number--10-number">
+<doc-anchor-target id="tonumberv-number--string-base-number--10-number">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#basetonumberv-number--string-base-number--10-number">#</doc-anchor-trigger>
-        <span>base.tonumber(v: number | string, base?: number = 10): number</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#tonumberv-number--string-base-number--10-number">#</doc-anchor-trigger>
+        <span>tonumber(v: number | string, base?: number = 10): number</span>
     </h3>
 </doc-anchor-target>
 </div>
 <code class="language-typescript" style="text-align:center; font-size:16px; white-space:pre-wrap; word-break:break-word;">
-base.tonumber(v: number | string, base?: number = 10): number
+tonumber(v: number | string, base?: number = 10): number
 </code>
 <ul>
 <li>Converts n to a number using the optional base (default 10), base can be from 2 to 36.</li>
@@ -467,58 +467,58 @@ base.tonumber(v: number | string, base?: number = 10): number
 <li>Returns nil if the number cannot be converted.</li>
 </ul>
 <div style="opacity: 0; height: 0; width: 0; overflow: hidden; pointer-events: auto;">
-<doc-anchor-target id="basetostringv-any-string">
+<doc-anchor-target id="tostringv-any-string">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#basetostringv-any-string">#</doc-anchor-trigger>
-        <span>base.tostring(v: any): string</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#tostringv-any-string">#</doc-anchor-trigger>
+        <span>tostring(v: any): string</span>
     </h3>
 </doc-anchor-target>
 </div>
 <code class="language-typescript" style="text-align:center; font-size:16px; white-space:pre-wrap; word-break:break-word;">
-base.tostring(v: any): string
+tostring(v: any): string
 </code>
 <ul>
 <li>Converts its argument to a string in a reasonable format.</li>
 <li>If a __tostring metatable field is found, that is used for the conversion.</li>
 </ul>
 <div style="opacity: 0; height: 0; width: 0; overflow: hidden; pointer-events: auto;">
-<doc-anchor-target id="basetypev-any-string">
+<doc-anchor-target id="typev-any-string">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#basetypev-any-string">#</doc-anchor-trigger>
-        <span>base.type(v: any): string</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#typev-any-string">#</doc-anchor-trigger>
+        <span>type(v: any): string</span>
     </h3>
 </doc-anchor-target>
 </div>
 <code class="language-typescript" style="text-align:center; font-size:16px; white-space:pre-wrap; word-break:break-word;">
-base.type(v: any): string
+type(v: any): string
 </code>
 <ul>
 <li>Returns a string, which is the type.</li>
 </ul>
 <div style="opacity: 0; height: 0; width: 0; overflow: hidden; pointer-events: auto;">
-<doc-anchor-target id="baseunpackt-table-any">
+<doc-anchor-target id="unpackt-table-any">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#baseunpackt-table-any">#</doc-anchor-trigger>
-        <span>base.unpack(t: table): ...any</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#unpackt-table-any">#</doc-anchor-trigger>
+        <span>unpack(t: table): ...any</span>
     </h3>
 </doc-anchor-target>
 </div>
 <code class="language-typescript" style="text-align:center; font-size:16px; white-space:pre-wrap; word-break:break-word;">
-base.unpack(t: table): ...any
+unpack(t: table): ...any
 </code>
 <ul>
 <li>Returns all elements from the given list (table) as individual values.</li>
 </ul>
 <div style="opacity: 0; height: 0; width: 0; overflow: hidden; pointer-events: auto;">
-<doc-anchor-target id="basexpcallf-function-err-function-boolean-any-any">
+<doc-anchor-target id="xpcallf-function-err-function-boolean-any-any">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#basexpcallf-function-err-function-boolean-any-any">#</doc-anchor-trigger>
-        <span>base.xpcall(f: function, err: function): boolean, any, ...any</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#xpcallf-function-err-function-boolean-any-any">#</doc-anchor-trigger>
+        <span>xpcall(f: function, err: function): boolean, any, ...any</span>
     </h3>
 </doc-anchor-target>
 </div>
 <code class="language-typescript" style="text-align:center; font-size:16px; white-space:pre-wrap; word-break:break-word;">
-base.xpcall(f: function, err: function): boolean, any, ...any
+xpcall(f: function, err: function): boolean, any, ...any
 </code>
 <ul>
 <li>Calls function f with err as the custom error handler.</li>
