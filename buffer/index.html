@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.7.0.800603402163">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.7.0.800611496585">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.7.0">
@@ -30,12 +30,12 @@
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../resources/css/retype.css?v=3.7.0.800603402163" rel="stylesheet">
+    <link href="../resources/css/retype.css?v=3.7.0.800611496585" rel="stylesheet">
 
-    <script data-cfasync="false" src="../resources/js/config.js?v=3.7.0.800603402163" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../resources/js/config.js?v=3.7.0.800611496585" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../resources/js/retype.js?v=3.7.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=3.7.0.800603402163" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../resources/js/prism.js?v=3.7.0.800603402163" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=3.7.0.800611496585" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../resources/js/prism.js?v=3.7.0.800611496585" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -169,15 +169,88 @@ Buffers can be held in reference in C to allow for continueous streams.</p>
 <doc-anchor-target id="buffernewdata-number--string--buffer-buffer">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#buffernewdata-number--string--buffer-buffer">#</doc-anchor-trigger>
-        <span>buffer.new(data?: number[] | string | buffer): buffer</span>
+        <span>buffer.new(data?: number | string | buffer): buffer</span>
     </h3>
 </doc-anchor-target>
 </div>
 <code class="language-typescript" style="text-align:center; font-size:16px; white-space:pre-wrap; word-break:break-word;">
-buffer.new(data?: number[] | string | buffer): buffer
+buffer.new(data?: number | string | buffer): buffer
 </code>
 <ul>
 <li>Creates a new buffer class.</li>
+<li>Passing another buffer through this just clones it.</li>
+</ul>
+<div style="opacity: 0; height: 0; width: 0; overflow: hidden; pointer-events: auto;">
+<doc-anchor-target id="buffernumberdata-number-buffer">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#buffernumberdata-number-buffer">#</doc-anchor-trigger>
+        <span>buffer.number(data: number): buffer</span>
+    </h3>
+</doc-anchor-target>
+</div>
+<code class="language-typescript" style="text-align:center; font-size:16px; white-space:pre-wrap; word-break:break-word;">
+buffer.number(data: number): buffer
+</code>
+<ul>
+<li>Strict number conversion to a buffer.</li>
+</ul>
+<div style="opacity: 0; height: 0; width: 0; overflow: hidden; pointer-events: auto;">
+<doc-anchor-target id="bufferstringdata-string-buffer">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#bufferstringdata-string-buffer">#</doc-anchor-trigger>
+        <span>buffer.string(data: string): buffer</span>
+    </h3>
+</doc-anchor-target>
+</div>
+<code class="language-typescript" style="text-align:center; font-size:16px; white-space:pre-wrap; word-break:break-word;">
+buffer.string(data: string): buffer
+</code>
+<ul>
+<li>Strict string conversion to a buffer.</li>
+</ul>
+<div style="opacity: 0; height: 0; width: 0; overflow: hidden; pointer-events: auto;">
+<doc-anchor-target id="bufferhexdata-string-buffer">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#bufferhexdata-string-buffer">#</doc-anchor-trigger>
+        <span>buffer.hex(data: string): buffer</span>
+    </h3>
+</doc-anchor-target>
+</div>
+<code class="language-typescript" style="text-align:center; font-size:16px; white-space:pre-wrap; word-break:break-word;">
+buffer.hex(data: string): buffer
+</code>
+<ul>
+<li>Converts a hex-style string to a buffer.</li>
+</ul>
+<div style="opacity: 0; height: 0; width: 0; overflow: hidden; pointer-events: auto;">
+<doc-anchor-target id="bufferbytesdata-number-buffer">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#bufferbytesdata-number-buffer">#</doc-anchor-trigger>
+        <span>buffer.bytes(data: number[]): buffer</span>
+    </h3>
+</doc-anchor-target>
+</div>
+<code class="language-typescript" style="text-align:center; font-size:16px; white-space:pre-wrap; word-break:break-word;">
+buffer.bytes(data: number[]): buffer
+</code>
+<ul>
+<li>Converts an array of 8-bit numbers to a buffer.</li>
+<li>8-bit numbers are represented as 0 - 255, anything above will get ignored due to dataloss.</li>
+</ul>
+<div style="opacity: 0; height: 0; width: 0; overflow: hidden; pointer-events: auto;">
+<doc-anchor-target id="bufferbinarydata-number--boolean-buffer">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#bufferbinarydata-number--boolean-buffer">#</doc-anchor-trigger>
+        <span>buffer.binary(data: number[] | boolean[]): buffer</span>
+    </h3>
+</doc-anchor-target>
+</div>
+<code class="language-typescript" style="text-align:center; font-size:16px; white-space:pre-wrap; word-break:break-word;">
+buffer.binary(data: number[] | boolean[]): buffer
+</code>
+<ul>
+<li>Converts an array of single-bit numbers or booleans to a buffer</li>
+<li>Obviously if you pass anything higher than a &quot;1&quot; it will get ignored.</li>
 </ul>
 <hr>
 <doc-anchor-target id="basics">
@@ -186,6 +259,21 @@ buffer.new(data?: number[] | string | buffer): buffer
         <span>Basics</span>
     </h2>
 </doc-anchor-target>
+<div style="opacity: 0; height: 0; width: 0; overflow: hidden; pointer-events: auto;">
+<doc-anchor-target id="bufferclone-buffer">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#bufferclone-buffer">#</doc-anchor-trigger>
+        <span>buffer:clone(): buffer</span>
+    </h3>
+</doc-anchor-target>
+</div>
+<code class="language-typescript" style="text-align:center; font-size:16px; white-space:pre-wrap; word-break:break-word;">
+buffer:clone(): buffer
+</code>
+<ul>
+<li>Makes a clone of the current buffer.</li>
+<li>This is similar to <code v-pre>buffer.new</code>, in a sense you can pass a number and get a buffer from it.</li>
+</ul>
 <div style="opacity: 0; height: 0; width: 0; overflow: hidden; pointer-events: auto;">
 <doc-anchor-target id="buffersize-number">
     <h3>
@@ -781,6 +869,85 @@ buffer:brroll(other: number | string | buffer): buffer
 </code>
 <ul>
 <li>Performs a bitwise right-roll operation.</li>
+</ul>
+<doc-anchor-target id="conversions">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#conversions">#</doc-anchor-trigger>
+        <span>Conversions</span>
+    </h2>
+</doc-anchor-target>
+<div style="opacity: 0; height: 0; width: 0; overflow: hidden; pointer-events: auto;">
+<doc-anchor-target id="buffertonumber-number">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#buffertonumber-number">#</doc-anchor-trigger>
+        <span>buffer:tonumber(): number</span>
+    </h3>
+</doc-anchor-target>
+</div>
+<code class="language-typescript" style="text-align:center; font-size:16px; white-space:pre-wrap; word-break:break-word;">
+buffer:tonumber(): number
+</code>
+<ul>
+<li>Converts the buffer to a number representation.</li>
+<li>Lua handles numbers using doubles so you may get some precision loss or missing data.</li>
+</ul>
+<div style="opacity: 0; height: 0; width: 0; overflow: hidden; pointer-events: auto;">
+<doc-anchor-target id="buffertostring-string">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#buffertostring-string">#</doc-anchor-trigger>
+        <span>buffer:tostring(): string</span>
+    </h3>
+</doc-anchor-target>
+</div>
+<code class="language-typescript" style="text-align:center; font-size:16px; white-space:pre-wrap; word-break:break-word;">
+buffer:tostring(): string
+</code>
+<ul>
+<li>Converts the buffer to a string representation.</li>
+</ul>
+<div style="opacity: 0; height: 0; width: 0; overflow: hidden; pointer-events: auto;">
+<doc-anchor-target id="buffertohex-string">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#buffertohex-string">#</doc-anchor-trigger>
+        <span>buffer:tohex(): string</span>
+    </h3>
+</doc-anchor-target>
+</div>
+<code class="language-typescript" style="text-align:center; font-size:16px; white-space:pre-wrap; word-break:break-word;">
+buffer:tohex(): string
+</code>
+<ul>
+<li>Converts the buffer to a hex-string representation.</li>
+</ul>
+<div style="opacity: 0; height: 0; width: 0; overflow: hidden; pointer-events: auto;">
+<doc-anchor-target id="buffertotable-number">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#buffertotable-number">#</doc-anchor-trigger>
+        <span>buffer:totable(): number[]</span>
+    </h3>
+</doc-anchor-target>
+</div>
+<code class="language-typescript" style="text-align:center; font-size:16px; white-space:pre-wrap; word-break:break-word;">
+buffer:totable(): number[]
+</code>
+<ul>
+<li>Converts the buffer to an array of 8-bits.</li>
+<li>The buffer internally is represented by this.</li>
+</ul>
+<div style="opacity: 0; height: 0; width: 0; overflow: hidden; pointer-events: auto;">
+<doc-anchor-target id="buffertobinary-number">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#buffertobinary-number">#</doc-anchor-trigger>
+        <span>buffer:tobinary(): number[]</span>
+    </h3>
+</doc-anchor-target>
+</div>
+<code class="language-typescript" style="text-align:center; font-size:16px; white-space:pre-wrap; word-break:break-word;">
+buffer:tobinary(): number[]
+</code>
+<ul>
+<li>Converts the buffer to an array of bits.</li>
+<li>Represented as 1&#x27;s and 0&#x27;s, not booleans.</li>
 </ul>
 <div hidden>
 <div class="codeblock-wrapper"><doc-codeblock>
