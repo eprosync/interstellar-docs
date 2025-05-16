@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.7.0.800641833137">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.7.0.800684424421">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.7.0">
@@ -30,12 +30,12 @@
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../resources/css/retype.css?v=3.7.0.800641833137" rel="stylesheet">
+    <link href="../resources/css/retype.css?v=3.7.0.800684424421" rel="stylesheet">
 
-    <script data-cfasync="false" src="../resources/js/config.js?v=3.7.0.800641833137" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../resources/js/config.js?v=3.7.0.800684424421" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../resources/js/retype.js?v=3.7.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=3.7.0.800641833137" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../resources/js/prism.js?v=3.7.0.800641833137" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=3.7.0.800684424421" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../resources/js/prism.js?v=3.7.0.800684424421" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -401,6 +401,21 @@ buffer:substitute(beginning: number, ending?: number): buffer
 <ul>
 <li>Gets a subset of the buffer based on the start and end positions.</li>
 </ul>
+<div style="opacity: 0; height: 0; width: 0; overflow: hidden; pointer-events: auto;">
+<doc-anchor-target id="bufferconcatother-number--string--buffer-buffer">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#bufferconcatother-number--string--buffer-buffer">#</doc-anchor-trigger>
+        <span>buffer:concat(other: number | string | buffer): buffer</span>
+    </h3>
+</doc-anchor-target>
+</div>
+<code class="language-typescript" style="text-align:center; font-size:16px; white-space:pre-wrap; word-break:break-word;">
+buffer:concat(other: number | string | buffer): buffer
+</code>
+<ul>
+<li>Concats two buffers or data together.</li>
+<li>Basically &quot;hello &quot; .. &quot;world&quot; in buffers would make &quot;hello world&quot;.</li>
+</ul>
 <doc-anchor-target id="consumers">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#consumers">#</doc-anchor-trigger>
@@ -675,6 +690,68 @@ buffer:uleb128(data: number)
 <li>Pushes back an unsigned integer of size 128</li>
 <li>This is a form of compression for large numbers</li>
 </ul>
+<doc-anchor-target id="comparators">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#comparators">#</doc-anchor-trigger>
+        <span>Comparators</span>
+    </h2>
+</doc-anchor-target>
+<div style="opacity: 0; height: 0; width: 0; overflow: hidden; pointer-events: auto;">
+<doc-anchor-target id="bufferequalother-number--string--buffer-boolean">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#bufferequalother-number--string--buffer-boolean">#</doc-anchor-trigger>
+        <span>buffer:equal(other: number | string | buffer): boolean</span>
+    </h3>
+</doc-anchor-target>
+</div>
+<code class="language-typescript" style="text-align:center; font-size:16px; white-space:pre-wrap; word-break:break-word;">
+buffer:equal(other: number | string | buffer): boolean
+</code>
+<ul>
+<li>If a value or buffer is equal</li>
+</ul>
+<div style="opacity: 0; height: 0; width: 0; overflow: hidden; pointer-events: auto;">
+<doc-anchor-target id="buffernotequalother-number--string--buffer-boolean">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#buffernotequalother-number--string--buffer-boolean">#</doc-anchor-trigger>
+        <span>buffer:notequal(other: number | string | buffer): boolean</span>
+    </h3>
+</doc-anchor-target>
+</div>
+<code class="language-typescript" style="text-align:center; font-size:16px; white-space:pre-wrap; word-break:break-word;">
+buffer:notequal(other: number | string | buffer): boolean
+</code>
+<ul>
+<li>If a value or buffer is not equal</li>
+</ul>
+<div style="opacity: 0; height: 0; width: 0; overflow: hidden; pointer-events: auto;">
+<doc-anchor-target id="bufferlessthanother-number--string--buffer-boolean">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#bufferlessthanother-number--string--buffer-boolean">#</doc-anchor-trigger>
+        <span>buffer:lessthan(other: number | string | buffer): boolean</span>
+    </h3>
+</doc-anchor-target>
+</div>
+<code class="language-typescript" style="text-align:center; font-size:16px; white-space:pre-wrap; word-break:break-word;">
+buffer:lessthan(other: number | string | buffer): boolean
+</code>
+<ul>
+<li>If a value or buffer is less than</li>
+</ul>
+<div style="opacity: 0; height: 0; width: 0; overflow: hidden; pointer-events: auto;">
+<doc-anchor-target id="buffergreaterthanother-number--string--buffer-boolean">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#buffergreaterthanother-number--string--buffer-boolean">#</doc-anchor-trigger>
+        <span>buffer:greaterthan(other: number | string | buffer): boolean</span>
+    </h3>
+</doc-anchor-target>
+</div>
+<code class="language-typescript" style="text-align:center; font-size:16px; white-space:pre-wrap; word-break:break-word;">
+buffer:greaterthan(other: number | string | buffer): boolean
+</code>
+<ul>
+<li>If a value or buffer is greater than</li>
+</ul>
 <doc-anchor-target id="arithmetic">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#arithmetic">#</doc-anchor-trigger>
@@ -948,6 +1025,125 @@ buffer:tobinary(): number[]
 <ul>
 <li>Converts the buffer to an array of bits.</li>
 <li>Represented as 1&#x27;s and 0&#x27;s, not booleans.</li>
+</ul>
+<doc-anchor-target id="meta-operators">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#meta-operators">#</doc-anchor-trigger>
+        <span>Meta Operators</span>
+    </h2>
+</doc-anchor-target>
+<p>Support for __* operations.</p>
+<div style="opacity: 0; height: 0; width: 0; overflow: hidden; pointer-events: auto;">
+<doc-anchor-target id="bufferoperatorother-buffer-buffer">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#bufferoperatorother-buffer-buffer">#</doc-anchor-trigger>
+        <span>buffer:operator+(other: buffer): buffer</span>
+    </h3>
+</doc-anchor-target>
+</div>
+<code class="language-typescript" style="text-align:center; font-size:16px; white-space:pre-wrap; word-break:break-word;">
+buffer:operator+(other: buffer): buffer
+</code>
+<ul>
+<li>Adds two buffers together through arithmetrics</li>
+</ul>
+<div style="opacity: 0; height: 0; width: 0; overflow: hidden; pointer-events: auto;">
+<doc-anchor-target id="bufferoperator-other-buffer-buffer">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#bufferoperator-other-buffer-buffer">#</doc-anchor-trigger>
+        <span>buffer:operator-(other: buffer): buffer</span>
+    </h3>
+</doc-anchor-target>
+</div>
+<code class="language-typescript" style="text-align:center; font-size:16px; white-space:pre-wrap; word-break:break-word;">
+buffer:operator-(other: buffer): buffer
+</code>
+<ul>
+<li>Subtracts two buffers together through arithmetrics</li>
+</ul>
+<div style="opacity: 0; height: 0; width: 0; overflow: hidden; pointer-events: auto;">
+<doc-anchor-target id="bufferoperatorother-buffer-buffer-1">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#bufferoperatorother-buffer-buffer-1">#</doc-anchor-trigger>
+        <span>buffer:operator*(other: buffer): buffer</span>
+    </h3>
+</doc-anchor-target>
+</div>
+<code class="language-typescript" style="text-align:center; font-size:16px; white-space:pre-wrap; word-break:break-word;">
+buffer:operator*(other: buffer): buffer
+</code>
+<ul>
+<li>Multiplies two buffers together through arithmetrics</li>
+</ul>
+<div style="opacity: 0; height: 0; width: 0; overflow: hidden; pointer-events: auto;">
+<doc-anchor-target id="bufferoperatorother-buffer-buffer-2">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#bufferoperatorother-buffer-buffer-2">#</doc-anchor-trigger>
+        <span>buffer:operator/(other: buffer): buffer</span>
+    </h3>
+</doc-anchor-target>
+</div>
+<code class="language-typescript" style="text-align:center; font-size:16px; white-space:pre-wrap; word-break:break-word;">
+buffer:operator/(other: buffer): buffer
+</code>
+<ul>
+<li>Divides two buffers together through arithmetrics</li>
+</ul>
+<div style="opacity: 0; height: 0; width: 0; overflow: hidden; pointer-events: auto;">
+<doc-anchor-target id="bufferoperatorother-buffer-buffer-3">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#bufferoperatorother-buffer-buffer-3">#</doc-anchor-trigger>
+        <span>buffer:operator^(other: buffer): buffer</span>
+    </h3>
+</doc-anchor-target>
+</div>
+<code class="language-typescript" style="text-align:center; font-size:16px; white-space:pre-wrap; word-break:break-word;">
+buffer:operator^(other: buffer): buffer
+</code>
+<ul>
+<li>Pow&#x27;s two buffers together through arithmetrics</li>
+</ul>
+<div style="opacity: 0; height: 0; width: 0; overflow: hidden; pointer-events: auto;">
+<doc-anchor-target id="bufferoperatorother-number--string--buffer-buffer">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#bufferoperatorother-number--string--buffer-buffer">#</doc-anchor-trigger>
+        <span>buffer:operator..(other: number | string | buffer): buffer</span>
+    </h3>
+</doc-anchor-target>
+</div>
+<code class="language-typescript" style="text-align:center; font-size:16px; white-space:pre-wrap; word-break:break-word;">
+buffer:operator..(other: number | string | buffer): buffer
+</code>
+<ul>
+<li>Concats two buffers together just like buffer:concat</li>
+</ul>
+<div style="opacity: 0; height: 0; width: 0; overflow: hidden; pointer-events: auto;">
+<doc-anchor-target id="bufferoperatorother-buffer-boolean">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#bufferoperatorother-buffer-boolean">#</doc-anchor-trigger>
+        <span>buffer:operator==(other: buffer): boolean</span>
+    </h3>
+</doc-anchor-target>
+</div>
+<code class="language-typescript" style="text-align:center; font-size:16px; white-space:pre-wrap; word-break:break-word;">
+buffer:operator==(other: buffer): boolean
+</code>
+<ul>
+<li>Compares two buffers together just like buffer:equal</li>
+</ul>
+<div style="opacity: 0; height: 0; width: 0; overflow: hidden; pointer-events: auto;">
+<doc-anchor-target id="bufferoperatorother-buffer-boolean-1">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#bufferoperatorother-buffer-boolean-1">#</doc-anchor-trigger>
+        <span>buffer:operator(other: buffer): boolean</span>
+    </h3>
+</doc-anchor-target>
+</div>
+<code class="language-typescript" style="text-align:center; font-size:16px; white-space:pre-wrap; word-break:break-word;">
+buffer:operator><(other: buffer): boolean
+</code>
+<ul>
+<li>Compares two buffers together just like buffer:lessthan and buffer:greaterthan</li>
 </ul>
 <div hidden>
 <div class="codeblock-wrapper"><doc-codeblock>
