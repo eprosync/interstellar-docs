@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="turbo-root" content="/interstellar-docs">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.7.0.801046971214">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.7.0.801054597083">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.7.0">
@@ -31,12 +31,12 @@
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../resources/css/retype.css?v=3.7.0.801046971214" rel="stylesheet">
+    <link href="../resources/css/retype.css?v=3.7.0.801054597083" rel="stylesheet">
 
-    <script data-cfasync="false" src="../resources/js/config.js?v=3.7.0.801046971214" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../resources/js/config.js?v=3.7.0.801054597083" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../resources/js/retype.js?v=3.7.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=3.7.0.801046971214" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../resources/js/prism.js?v=3.7.0.801046971214" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=3.7.0.801054597083" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../resources/js/prism.js?v=3.7.0.801054597083" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -609,6 +609,68 @@ math.tanh(v: number): number
 </code>
 <ul>
 <li>Hyperbolic tangent of v radians.</li>
+</ul>
+<doc-anchor-target id="extension">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#extension">#</doc-anchor-trigger>
+        <span>Extension</span>
+    </h2>
+</doc-anchor-target>
+<div style="opacity: 0; height: 0; width: 0; overflow: hidden; pointer-events: auto;">
+<doc-anchor-target id="mathrootslineara-number-b-number-number">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#mathrootslineara-number-b-number-number">#</doc-anchor-trigger>
+        <span>math.roots.linear(a: number, b: number): number</span>
+    </h3>
+</doc-anchor-target>
+</div>
+<code class="language-typescript" style="text-align:center; font-size:16px; white-space:pre-wrap; word-break:break-word;">
+math.roots.linear(a: number, b: number): number
+</code>
+<ul>
+<li>Solves the roots of <code v-pre>ax + b</code></li>
+</ul>
+<div style="opacity: 0; height: 0; width: 0; overflow: hidden; pointer-events: auto;">
+<doc-anchor-target id="mathrootsquadrica-number-b-number-c-number-number-number">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#mathrootsquadrica-number-b-number-c-number-number-number">#</doc-anchor-trigger>
+        <span>math.roots.quadric(a: number, b: number, c: number): number, number</span>
+    </h3>
+</doc-anchor-target>
+</div>
+<code class="language-typescript" style="text-align:center; font-size:16px; white-space:pre-wrap; word-break:break-word;">
+math.roots.quadric(a: number, b: number, c: number): number, number
+</code>
+<ul>
+<li>Solves the roots of <code v-pre>ax^2 + bx + c</code></li>
+</ul>
+<div style="opacity: 0; height: 0; width: 0; overflow: hidden; pointer-events: auto;">
+<doc-anchor-target id="mathrootscubica-number-b-number-c-number-d-number-number-number-number">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#mathrootscubica-number-b-number-c-number-d-number-number-number-number">#</doc-anchor-trigger>
+        <span>math.roots.cubic(a: number, b: number, c: number, d: number): number, number, number</span>
+    </h3>
+</doc-anchor-target>
+</div>
+<code class="language-typescript" style="text-align:center; font-size:16px; white-space:pre-wrap; word-break:break-word;">
+math.roots.cubic(a: number, b: number, c: number, d: number): number, number, number
+</code>
+<ul>
+<li>Solves the roots of <code v-pre>ax^3 + bx^2 + cx + d</code></li>
+</ul>
+<div style="opacity: 0; height: 0; width: 0; overflow: hidden; pointer-events: auto;">
+<doc-anchor-target id="mathrootsquartica-number-b-number-c-number-d-number-e-number-number-number-number-number">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#mathrootsquartica-number-b-number-c-number-d-number-e-number-number-number-number-number">#</doc-anchor-trigger>
+        <span>math.roots.quartic(a: number, b: number, c: number, d: number, e: number): number, number, number, number</span>
+    </h3>
+</doc-anchor-target>
+</div>
+<code class="language-typescript" style="text-align:center; font-size:16px; white-space:pre-wrap; word-break:break-word;">
+math.roots.quartic(a: number, b: number, c: number, d: number, e: number): number, number, number, number
+</code>
+<ul>
+<li>Solves the roots of <code v-pre>ax^4 + bx^3 + cx^2 + dx + e</code></li>
 </ul>
 <div hidden>
 <div class="codeblock-wrapper"><doc-codeblock>
