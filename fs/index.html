@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="turbo-root" content="/interstellar-docs">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.7.0.801046779746">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.7.0.801046971214">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.7.0">
@@ -31,12 +31,12 @@
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../resources/css/retype.css?v=3.7.0.801046779746" rel="stylesheet">
+    <link href="../resources/css/retype.css?v=3.7.0.801046971214" rel="stylesheet">
 
-    <script data-cfasync="false" src="../resources/js/config.js?v=3.7.0.801046779746" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../resources/js/config.js?v=3.7.0.801046971214" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../resources/js/retype.js?v=3.7.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=3.7.0.801046779746" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../resources/js/prism.js?v=3.7.0.801046779746" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=3.7.0.801046971214" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../resources/js/prism.js?v=3.7.0.801046971214" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -181,15 +181,15 @@ fs.read(path: string, async?: function): string?
 <li>Runs in async if a function is provided</li>
 </ul>
 <div style="opacity: 0; height: 0; width: 0; overflow: hidden; pointer-events: auto;">
-<doc-anchor-target id="fswritepath-string-data-string-async-function--boolean">
+<doc-anchor-target id="fswritepath-string-data-string--buffer-async-function--boolean">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#fswritepath-string-data-string-async-function--boolean">#</doc-anchor-trigger>
-        <span>fs.write(path: string, data: string, async?: function | boolean)</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#fswritepath-string-data-string--buffer-async-function--boolean">#</doc-anchor-trigger>
+        <span>fs.write(path: string, data: string | buffer, async?: function | boolean)</span>
     </h3>
 </doc-anchor-target>
 </div>
 <code class="language-typescript" style="text-align:center; font-size:16px; white-space:pre-wrap; word-break:break-word;">
-fs.write(path: string, data: string, async?: function | boolean)
+fs.write(path: string, data: string | buffer, async?: function | boolean)
 </code>
 <ul>
 <li>Writes to a file provided by the path</li>
@@ -282,15 +282,15 @@ fs.delfile(path: string)
 <li>Deletes a file from the specified path</li>
 </ul>
 <div style="opacity: 0; height: 0; width: 0; overflow: hidden; pointer-events: auto;">
-<doc-anchor-target id="fsappendpath-string-data-string-async-function--boolean">
+<doc-anchor-target id="fsappendpath-string-data-string--buffer-async-function--boolean">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#fsappendpath-string-data-string-async-function--boolean">#</doc-anchor-trigger>
-        <span>fs.append(path: string, data: string, async?: function | boolean)</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#fsappendpath-string-data-string--buffer-async-function--boolean">#</doc-anchor-trigger>
+        <span>fs.append(path: string, data: string | buffer, async?: function | boolean)</span>
     </h3>
 </doc-anchor-target>
 </div>
 <code class="language-typescript" style="text-align:center; font-size:16px; white-space:pre-wrap; word-break:break-word;">
-fs.append(path: string, data: string, async?: function | boolean)
+fs.append(path: string, data: string | buffer, async?: function | boolean)
 </code>
 <ul>
 <li>Appends data onto the specified file</li>
