@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="turbo-root" content="/interstellar-docs">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.7.0.801054597083">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.7.0.801384126567">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.7.0">
@@ -31,12 +31,12 @@
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../resources/css/retype.css?v=3.7.0.801054597083" rel="stylesheet">
+    <link href="../resources/css/retype.css?v=3.7.0.801384126567" rel="stylesheet">
 
-    <script data-cfasync="false" src="../resources/js/config.js?v=3.7.0.801054597083" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../resources/js/config.js?v=3.7.0.801384126567" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../resources/js/retype.js?v=3.7.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=3.7.0.801054597083" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../resources/js/prism.js?v=3.7.0.801054597083" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=3.7.0.801384126567" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../resources/js/prism.js?v=3.7.0.801384126567" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -308,6 +308,55 @@ table.sort(t: table, f?: function)
 <li>Sorts the table using the supplied function f as the comparison function for each element.</li>
 <li>Function f should return true if the first element is &lt; the second element. If the function omitted it defaults to the operator &lt;.</li>
 <li>Sorting is not stable, that is, the sequence of equal keys is not necessarily preserved.</li>
+</ul>
+<doc-anchor-target id="extension">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#extension">#</doc-anchor-trigger>
+        <span>Extension</span>
+    </h2>
+</doc-anchor-target>
+<div style="opacity: 0; height: 0; width: 0; overflow: hidden; pointer-events: auto;">
+<doc-anchor-target id="tableisarrayt-table-boolean">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#tableisarrayt-table-boolean">#</doc-anchor-trigger>
+        <span>table.isarray(t: table): boolean</span>
+    </h3>
+</doc-anchor-target>
+</div>
+<code class="language-typescript" style="text-align:center; font-size:16px; white-space:pre-wrap; word-break:break-word;">
+table.isarray(t: table): boolean
+</code>
+<ul>
+<li>Checks if a table is an array-like object.</li>
+</ul>
+<div style="opacity: 0; height: 0; width: 0; overflow: hidden; pointer-events: auto;">
+<doc-anchor-target id="tabletojsont-table-string">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#tabletojsont-table-string">#</doc-anchor-trigger>
+        <span>table.tojson(t: table): string</span>
+    </h3>
+</doc-anchor-target>
+</div>
+<code class="language-typescript" style="text-align:center; font-size:16px; white-space:pre-wrap; word-break:break-word;">
+table.tojson(t: table): string
+</code>
+<ul>
+<li>Attempts to convert a table to json format.</li>
+<li>Some errors will be noted in brackets like <code v-pre>[cyclic]</code> indicating possible cyclic tables.</li>
+</ul>
+<div style="opacity: 0; height: 0; width: 0; overflow: hidden; pointer-events: auto;">
+<doc-anchor-target id="tablefromjsonv-string-table">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#tablefromjsonv-string-table">#</doc-anchor-trigger>
+        <span>table.fromjson(v: string): table</span>
+    </h3>
+</doc-anchor-target>
+</div>
+<code class="language-typescript" style="text-align:center; font-size:16px; white-space:pre-wrap; word-break:break-word;">
+table.fromjson(v: string): table
+</code>
+<ul>
+<li>Attempts to convert a json format string into a table.</li>
 </ul>
 <div hidden>
 <div class="codeblock-wrapper"><doc-codeblock>
