@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="turbo-root" content="/interstellar-docs">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.7.0.801412078749">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.7.0.801545564037">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.7.0">
@@ -31,12 +31,12 @@
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../resources/css/retype.css?v=3.7.0.801412078749" rel="stylesheet">
+    <link href="../resources/css/retype.css?v=3.7.0.801545564037" rel="stylesheet">
 
-    <script data-cfasync="false" src="../resources/js/config.js?v=3.7.0.801412078749" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../resources/js/config.js?v=3.7.0.801545564037" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../resources/js/retype.js?v=3.7.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=3.7.0.801412078749" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../resources/js/prism.js?v=3.7.0.801412078749" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=3.7.0.801545564037" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../resources/js/prism.js?v=3.7.0.801545564037" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -181,6 +181,42 @@ Do note you are responsible for spinning up new states.</p>
     </div>
 </div>
 <hr>
+<doc-anchor-target id="threading">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#threading">#</doc-anchor-trigger>
+        <span>Threading</span>
+    </h2>
+</doc-anchor-target>
+<p>As of currently, the thread isolation for lua_State is quite basic.<br />
+As an example, if we create a new lua_State with thread isolation:</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-lua"><code v-pre class="language-lua">local diff = os.clock()
+local schedule_response = false
+
+-- this section runs under its own thread thanks to task.*
+task.add(&quot;think&quot;, &quot;test&quot;, function()
+    if diff + 1 &lt; os.clock() then
+        diff = os.clock()
+        if schedule_response then
+            signal.fire(reflection.get(&quot;server&quot;), &quot;test&quot;, schedule_response)
+            schedule_response = false
+        end
+    end
+end)
+
+-- this section when executed will be in-sync with which ever thread/lua_State called it.
+-- therefore **this is not actually threaded here**.
+-- so I recommend task deferring into task.* think operation above.
+signal.add(&quot;test&quot;, &quot;incoming&quot;, function(...)
+    print(&quot;from main thread:&quot;, ...)
+    signal.fire(reflection.get(&quot;server&quot;), &quot;test&quot;, &quot;got data!&quot;)
+    schedule_response = &quot;hello world&quot;
+end)</code></pre>
+</doc-codeblock></div>
+<p>Nothing is perfect here, so do expect some problems with this system.<br />
+Currently task.* only supports &quot;think&quot; operation, which runs every possible cycle.<br />
+Do note that some cfunctions may not work depending on how they are implemented.</p>
+<hr>
 <doc-anchor-target id="functions">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#functions">#</doc-anchor-trigger>
@@ -199,7 +235,7 @@ Do note you are responsible for spinning up new states.</p>
 reflection.is(name: string): boolean
 </code>
 <ul>
-<li>checks if the current execution is of a named <code v-pre>lua_State</code></li>
+<li>Checks if the current execution is of a named <code v-pre>lua_State</code></li>
 </ul>
 <div style="opacity: 0; height: 0; width: 0; overflow: hidden; pointer-events: auto;">
 <doc-anchor-target id="reflectiongetname-string-lua_state">
@@ -213,7 +249,7 @@ reflection.is(name: string): boolean
 reflection.get(name: string): lua_State?
 </code>
 <ul>
-<li>attempts to locate a <code v-pre>lua_State</code></li>
+<li>Attempts to locate a <code v-pre>lua_State</code></li>
 </ul>
 <div style="opacity: 0; height: 0; width: 0; overflow: hidden; pointer-events: auto;">
 <doc-anchor-target id="reflectioncurrent-lua_state">
@@ -227,7 +263,7 @@ reflection.get(name: string): lua_State?
 reflection.current(): lua_State
 </code>
 <ul>
-<li>gets the current <code v-pre>lua_State</code> this is executed in</li>
+<li>Gets the current <code v-pre>lua_State</code> this is executed in</li>
 </ul>
 <div style="opacity: 0; height: 0; width: 0; overflow: hidden; pointer-events: auto;">
 <doc-anchor-target id="reflectionall-index-string-lua_state">
@@ -241,7 +277,7 @@ reflection.current(): lua_State
 reflection.all(): {[index: string]: lua_State}
 </code>
 <ul>
-<li>gets all instances of <code v-pre>lua_State</code> and their names</li>
+<li>Gets all instances of <code v-pre>lua_State</code> and their names</li>
 </ul>
 <div style="opacity: 0; height: 0; width: 0; overflow: hidden; pointer-events: auto;">
 <doc-anchor-target id="reflectionnamelua_state-state-string">
@@ -255,7 +291,7 @@ reflection.all(): {[index: string]: lua_State}
 reflection.name(lua_State* state): string
 </code>
 <ul>
-<li>converts a <code v-pre>lua_State</code> to its named counterpart</li>
+<li>Converts a <code v-pre>lua_State</code> to its named counterpart</li>
 </ul>
 <div style="opacity: 0; height: 0; width: 0; overflow: hidden; pointer-events: auto;">
 <doc-anchor-target id="reflectionexecutesource-string-name-string-state-lua_state-string">
@@ -269,7 +305,7 @@ reflection.name(lua_State* state): string
 reflection.execute(source: string, name: string, state?: lua_State): string?
 </code>
 <ul>
-<li>executes lua on a <code v-pre>lua_State</code> or the current active state its in</li>
+<li>Executes lua on a <code v-pre>lua_State</code> or the current active state its in</li>
 </ul>
 <div style="opacity: 0; height: 0; width: 0; overflow: hidden; pointer-events: auto;">
 <doc-anchor-target id="reflectioncompilesource-string-name-string-function--string">
@@ -283,21 +319,23 @@ reflection.execute(source: string, name: string, state?: lua_State): string?
 reflection.compile(source: string, name: string): function | string
 </code>
 <ul>
-<li>compiles lua on the the current active state its in</li>
+<li>Compiles lua on the the current active state its in</li>
 </ul>
 <div style="opacity: 0; height: 0; width: 0; overflow: hidden; pointer-events: auto;">
-<doc-anchor-target id="reflectionopenname-string-lua_state">
+<doc-anchor-target id="reflectionopenname-string-threaded-boolean-lua_state">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#reflectionopenname-string-lua_state">#</doc-anchor-trigger>
-        <span>reflection.open(name: string): lua_State</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#reflectionopenname-string-threaded-boolean-lua_state">#</doc-anchor-trigger>
+        <span>reflection.open(name: string, threaded: boolean): lua_State</span>
     </h3>
 </doc-anchor-target>
 </div>
 <code class="language-typescript" style="text-align:center; font-size:16px; white-space:pre-wrap; word-break:break-word;">
-reflection.open(name: string): lua_State
+reflection.open(name: string, threaded: boolean): lua_State
 </code>
 <ul>
-<li>spawns a new <code v-pre>lua_State</code> instance or returns one if it already exists</li>
+<li>Spawns a new <code v-pre>lua_State</code> instance or returns one if it already exists</li>
+<li>By enabling threaded, will open the lua_State with its own runtime environment.</li>
+<li>This can be accessed via <code v-pre>task.*</code> which is a signal specific for that state.</li>
 </ul>
 <div class="codeblock-wrapper"><doc-codeblock>
 <pre class="language-lua"><code v-pre class="language-lua">-- creates a new lua_State
@@ -336,8 +374,8 @@ reflection.close(state)</code></pre>
 reflection.close(state: lua_State)
 </code>
 <ul>
-<li>destroys a <code v-pre>lua_State</code> instance</li>
-<li>this won&#x27;t work on games with built-in <code v-pre>lua_State</code> instances</li>
+<li>Destroys a <code v-pre>lua_State</code> instance</li>
+<li>This won&#x27;t work on games with built-in <code v-pre>lua_State</code> instances</li>
 </ul>
 <div style="opacity: 0; height: 0; width: 0; overflow: hidden; pointer-events: auto;">
 <doc-anchor-target id="reflectionstackfunc-functionl-lua_state-state-lua_state-any">
@@ -351,8 +389,8 @@ reflection.close(state: lua_State)
 reflection.stack(func: function(L: lua_State), state?: lua_State): any...
 </code>
 <ul>
-<li>creates a stack isolated bridge to a lua_State.</li>
-<li>do note that you don&#x27;t need to do this but using this reduces the risk of overflows.</li>
+<li>Creates a stack isolated bridge to a lua_State.</li>
+<li>Do note that you don&#x27;t need to do this but using this reduces the risk of overflows.</li>
 </ul>
 <div class="codeblock-wrapper"><doc-codeblock>
 <pre class="language-lua"><code v-pre class="language-lua">-- this is in menu-state or another lua-state
@@ -466,8 +504,8 @@ L:execute(source: string, name: string): string?
 L:compile(source: string, name: string): string?
 </code>
 <ul>
-<li>compiles lua on a <code v-pre>lua_State</code>.</li>
-<li>do note that doing this will push the function onto the stack, consider seeing more in CAPI.</li>
+<li>Compiles lua on a <code v-pre>lua_State</code>.</li>
+<li>Do note that doing this will push the function onto the stack, consider seeing more in CAPI.</li>
 </ul>
 <div style="opacity: 0; height: 0; width: 0; overflow: hidden; pointer-events: auto;">
 <doc-anchor-target id="lstackfunc-functionl-lua_state-any">
@@ -481,8 +519,8 @@ L:compile(source: string, name: string): string?
 L:stack(func: function(L: lua_State)): any?
 </code>
 <ul>
-<li>creates a stack isolated bridge to a lua_State.</li>
-<li>do note that you don&#x27;t need to do this but using this reduces the risk of overflows.</li>
+<li>Creates a stack isolated bridge to a lua_State.</li>
+<li>Do note that you don&#x27;t need to do this but using this reduces the risk of overflows.</li>
 </ul>
 <hr>
 <div style="opacity: 0; height: 0; width: 0; overflow: hidden; pointer-events: auto;">
