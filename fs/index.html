@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="turbo-root" content="/interstellar-docs">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.7.0.801742791567">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.7.0.802367240980">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.7.0">
@@ -31,12 +31,12 @@
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../resources/css/retype.css?v=3.7.0.801742791567" rel="stylesheet">
+    <link href="../resources/css/retype.css?v=3.7.0.802367240980" rel="stylesheet">
 
-    <script data-cfasync="false" src="../resources/js/config.js?v=3.7.0.801742791567" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../resources/js/config.js?v=3.7.0.802367240980" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../resources/js/retype.js?v=3.7.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=3.7.0.801742791567" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../resources/js/prism.js?v=3.7.0.801742791567" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=3.7.0.802367240980" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../resources/js/prism.js?v=3.7.0.802367240980" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -166,6 +166,20 @@ This one allows the use of &quot;..&quot;, without breaching the workspace.</p>
     </h2>
 </doc-anchor-target>
 <div style="opacity: 0; height: 0; width: 0; overflow: hidden; pointer-events: auto;">
+<doc-anchor-target id="fsseparator-string">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#fsseparator-string">#</doc-anchor-trigger>
+        <span>fs.separator: string</span>
+    </h3>
+</doc-anchor-target>
+</div>
+<code class="language-typescript" style="text-align:center; font-size:16px; white-space:pre-wrap; word-break:break-word;">
+fs.separator: string
+</code>
+<ul>
+<li>The separator character responsible for the current filesystem</li>
+</ul>
+<div style="opacity: 0; height: 0; width: 0; overflow: hidden; pointer-events: auto;">
 <doc-anchor-target id="fsreadpath-string-async-function-string">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#fsreadpath-string-async-function-string">#</doc-anchor-trigger>
@@ -193,6 +207,22 @@ fs.write(path: string, data: string | buffer, async?: function | boolean)
 </code>
 <ul>
 <li>Writes to a file provided by the path</li>
+<li>Runs in async if passing a function or boolean</li>
+<li>Function callback acts as trigger from completion</li>
+</ul>
+<div style="opacity: 0; height: 0; width: 0; overflow: hidden; pointer-events: auto;">
+<doc-anchor-target id="fsappendpath-string-data-string--buffer-async-function--boolean">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#fsappendpath-string-data-string--buffer-async-function--boolean">#</doc-anchor-trigger>
+        <span>fs.append(path: string, data: string | buffer, async?: function | boolean)</span>
+    </h3>
+</doc-anchor-target>
+</div>
+<code class="language-typescript" style="text-align:center; font-size:16px; white-space:pre-wrap; word-break:break-word;">
+fs.append(path: string, data: string | buffer, async?: function | boolean)
+</code>
+<ul>
+<li>Appends data onto the specified file</li>
 <li>Runs in async if passing a function or boolean</li>
 <li>Function callback acts as trigger from completion</li>
 </ul>
@@ -225,77 +255,133 @@ fs.isfolder(path: string): boolean
 <li>Checks if a filesystem object is a folder</li>
 </ul>
 <div style="opacity: 0; height: 0; width: 0; overflow: hidden; pointer-events: auto;">
-<doc-anchor-target id="fslistfilespath-string-string">
+<doc-anchor-target id="fsreadablepath-string-boolean">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#fslistfilespath-string-string">#</doc-anchor-trigger>
-        <span>fs.listfiles(path: string): string[]</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#fsreadablepath-string-boolean">#</doc-anchor-trigger>
+        <span>fs.readable(path: string): boolean</span>
     </h3>
 </doc-anchor-target>
 </div>
 <code class="language-typescript" style="text-align:center; font-size:16px; white-space:pre-wrap; word-break:break-word;">
-fs.listfiles(path: string): string[]
+fs.readable(path: string): boolean
+</code>
+<ul>
+<li>Checks if a filesystem object is readable</li>
+</ul>
+<div style="opacity: 0; height: 0; width: 0; overflow: hidden; pointer-events: auto;">
+<doc-anchor-target id="fswriteablepath-string-boolean">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#fswriteablepath-string-boolean">#</doc-anchor-trigger>
+        <span>fs.writeable(path: string): boolean</span>
+    </h3>
+</doc-anchor-target>
+</div>
+<code class="language-typescript" style="text-align:center; font-size:16px; white-space:pre-wrap; word-break:break-word;">
+fs.writeable(path: string): boolean
+</code>
+<ul>
+<li>Checks if a filesystem object is writeable</li>
+</ul>
+<div style="opacity: 0; height: 0; width: 0; overflow: hidden; pointer-events: auto;">
+<doc-anchor-target id="fsscanpath-string-string">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#fsscanpath-string-string">#</doc-anchor-trigger>
+        <span>fs.scan(path: string): string[]</span>
+    </h3>
+</doc-anchor-target>
+</div>
+<code class="language-typescript" style="text-align:center; font-size:16px; white-space:pre-wrap; word-break:break-word;">
+fs.scan(path: string): string[]
 </code>
 <ul>
 <li>Lists files in the specified path</li>
 </ul>
 <div style="opacity: 0; height: 0; width: 0; overflow: hidden; pointer-events: auto;">
-<doc-anchor-target id="fsmakefolderpath-string">
+<doc-anchor-target id="fsmkdirpath-string">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#fsmakefolderpath-string">#</doc-anchor-trigger>
-        <span>fs.makefolder(path: string)</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#fsmkdirpath-string">#</doc-anchor-trigger>
+        <span>fs.mkdir(path: string)</span>
     </h3>
 </doc-anchor-target>
 </div>
 <code class="language-typescript" style="text-align:center; font-size:16px; white-space:pre-wrap; word-break:break-word;">
-fs.makefolder(path: string)
+fs.mkdir(path: string)
 </code>
 <ul>
 <li>Creates a folder in the specified path</li>
 <li>This is recursive, allowing it to generate multiple folders</li>
 </ul>
 <div style="opacity: 0; height: 0; width: 0; overflow: hidden; pointer-events: auto;">
-<doc-anchor-target id="fsdelfolderpath-string">
+<doc-anchor-target id="fsrmdirpath-string">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#fsdelfolderpath-string">#</doc-anchor-trigger>
-        <span>fs.delfolder(path: string)</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#fsrmdirpath-string">#</doc-anchor-trigger>
+        <span>fs.rmdir(path: string)</span>
     </h3>
 </doc-anchor-target>
 </div>
 <code class="language-typescript" style="text-align:center; font-size:16px; white-space:pre-wrap; word-break:break-word;">
-fs.delfolder(path: string)
+fs.rmdir(path: string)
 </code>
 <ul>
 <li>Deletes a folder from the specified path</li>
 </ul>
 <div style="opacity: 0; height: 0; width: 0; overflow: hidden; pointer-events: auto;">
-<doc-anchor-target id="fsdelfilepath-string">
+<doc-anchor-target id="fsrmfilepath-string">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#fsdelfilepath-string">#</doc-anchor-trigger>
-        <span>fs.delfile(path: string)</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#fsrmfilepath-string">#</doc-anchor-trigger>
+        <span>fs.rmfile(path: string)</span>
     </h3>
 </doc-anchor-target>
 </div>
 <code class="language-typescript" style="text-align:center; font-size:16px; white-space:pre-wrap; word-break:break-word;">
-fs.delfile(path: string)
+fs.rmfile(path: string)
 </code>
 <ul>
 <li>Deletes a file from the specified path</li>
 </ul>
 <div style="opacity: 0; height: 0; width: 0; overflow: hidden; pointer-events: auto;">
-<doc-anchor-target id="fsappendpath-string-data-string--buffer-async-function--boolean">
+<doc-anchor-target id="fsrmpath-string">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#fsappendpath-string-data-string--buffer-async-function--boolean">#</doc-anchor-trigger>
-        <span>fs.append(path: string, data: string | buffer, async?: function | boolean)</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#fsrmpath-string">#</doc-anchor-trigger>
+        <span>fs.rm(path: string)</span>
     </h3>
 </doc-anchor-target>
 </div>
 <code class="language-typescript" style="text-align:center; font-size:16px; white-space:pre-wrap; word-break:break-word;">
-fs.append(path: string, data: string | buffer, async?: function | boolean)
+fs.rm(path: string)
 </code>
 <ul>
-<li>Appends data onto the specified file</li>
-<li>Runs in async if passing a function or boolean</li>
-<li>Function callback acts as trigger from completion</li>
+<li>Deletes any file or folder from the specified path</li>
+</ul>
+<div style="opacity: 0; height: 0; width: 0; overflow: hidden; pointer-events: auto;">
+<doc-anchor-target id="fsmvfrom-string-to-string-boolean">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#fsmvfrom-string-to-string-boolean">#</doc-anchor-trigger>
+        <span>fs.mv(from: string, to: string): boolean</span>
+    </h3>
+</doc-anchor-target>
+</div>
+<code class="language-typescript" style="text-align:center; font-size:16px; white-space:pre-wrap; word-break:break-word;">
+fs.mv(from: string, to: string): boolean
+</code>
+<ul>
+<li>Moves any file or folder to a new location</li>
+<li>This will overwrite files</li>
+</ul>
+<div style="opacity: 0; height: 0; width: 0; overflow: hidden; pointer-events: auto;">
+<doc-anchor-target id="fscpfrom-string-to-string-boolean">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#fscpfrom-string-to-string-boolean">#</doc-anchor-trigger>
+        <span>fs.cp(from: string, to: string): boolean</span>
+    </h3>
+</doc-anchor-target>
+</div>
+<code class="language-typescript" style="text-align:center; font-size:16px; white-space:pre-wrap; word-break:break-word;">
+fs.cp(from: string, to: string): boolean
+</code>
+<ul>
+<li>Copies any file or folder to a new location</li>
+<li>This will overwrite files</li>
 </ul>
 <div style="opacity: 0; height: 0; width: 0; overflow: hidden; pointer-events: auto;">
 <doc-anchor-target id="fsforwardpath-string-string">
