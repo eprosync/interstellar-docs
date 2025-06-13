@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="turbo-root" content="/interstellar-docs">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.7.0.802367240980">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.7.0.803127871550">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.7.0">
@@ -31,12 +31,12 @@
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../resources/css/retype.css?v=3.7.0.802367240980" rel="stylesheet">
+    <link href="../resources/css/retype.css?v=3.7.0.803127871550" rel="stylesheet">
 
-    <script data-cfasync="false" src="../resources/js/config.js?v=3.7.0.802367240980" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../resources/js/config.js?v=3.7.0.803127871550" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../resources/js/retype.js?v=3.7.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=3.7.0.802367240980" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../resources/js/prism.js?v=3.7.0.802367240980" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=3.7.0.803127871550" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../resources/js/prism.js?v=3.7.0.803127871550" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -280,20 +280,6 @@ reflection.all(): {[index: string]: lua_State}
 <li>Gets all instances of <code v-pre>lua_State</code> and their names</li>
 </ul>
 <div style="opacity: 0; height: 0; width: 0; overflow: hidden; pointer-events: auto;">
-<doc-anchor-target id="reflectionnamelua_state-state-string">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#reflectionnamelua_state-state-string">#</doc-anchor-trigger>
-        <span>reflection.name(lua_State* state): string</span>
-    </h3>
-</doc-anchor-target>
-</div>
-<code class="language-typescript" style="text-align:center; font-size:16px; white-space:pre-wrap; word-break:break-word;">
-reflection.name(lua_State* state): string
-</code>
-<ul>
-<li>Converts a <code v-pre>lua_State</code> to its named counterpart</li>
-</ul>
-<div style="opacity: 0; height: 0; width: 0; overflow: hidden; pointer-events: auto;">
 <doc-anchor-target id="reflectionexecutesource-string-name-string-state-lua_state-string">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#reflectionexecutesource-string-name-string-state-lua_state-string">#</doc-anchor-trigger>
@@ -521,6 +507,91 @@ L:stack(func: function(L: lua_State)): any?
 <ul>
 <li>Creates a stack isolated bridge to a lua_State.</li>
 <li>Do note that you don&#x27;t need to do this but using this reduces the risk of overflows.</li>
+</ul>
+<div style="opacity: 0; height: 0; width: 0; overflow: hidden; pointer-events: auto;">
+<doc-anchor-target id="lname-string">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#lname-string">#</doc-anchor-trigger>
+        <span>L:name(): string</span>
+    </h3>
+</doc-anchor-target>
+</div>
+<code class="language-typescript" style="text-align:center; font-size:16px; white-space:pre-wrap; word-break:break-word;">
+L:name(): string
+</code>
+<ul>
+<li>Converts a <code v-pre>lua_State</code> to its named counterpart</li>
+</ul>
+<div style="opacity: 0; height: 0; width: 0; overflow: hidden; pointer-events: auto;">
+<doc-anchor-target id="lthreaded-boolean">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#lthreaded-boolean">#</doc-anchor-trigger>
+        <span>L:threaded(): boolean</span>
+    </h3>
+</doc-anchor-target>
+</div>
+<code class="language-typescript" style="text-align:center; font-size:16px; white-space:pre-wrap; word-break:break-word;">
+L:threaded(): boolean
+</code>
+<ul>
+<li>Checks if the <code v-pre>lua_State</code> is running under a threaded environment</li>
+</ul>
+<div style="opacity: 0; height: 0; width: 0; overflow: hidden; pointer-events: auto;">
+<doc-anchor-target id="linternal-boolean">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#linternal-boolean">#</doc-anchor-trigger>
+        <span>L:internal(): boolean</span>
+    </h3>
+</doc-anchor-target>
+</div>
+<code class="language-typescript" style="text-align:center; font-size:16px; white-space:pre-wrap; word-break:break-word;">
+L:internal(): boolean
+</code>
+<ul>
+<li>Checks if the <code v-pre>lua_State</code> is internally created</li>
+<li>Internals prevent certain actions from being made, such as destruction</li>
+</ul>
+<div style="opacity: 0; height: 0; width: 0; overflow: hidden; pointer-events: auto;">
+<doc-anchor-target id="lroot-boolean">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#lroot-boolean">#</doc-anchor-trigger>
+        <span>L:root(): boolean</span>
+    </h3>
+</doc-anchor-target>
+</div>
+<code class="language-typescript" style="text-align:center; font-size:16px; white-space:pre-wrap; word-break:break-word;">
+L:root(): boolean
+</code>
+<ul>
+<li>Checks if the <code v-pre>lua_State</code> is a root of all other <code v-pre>lua_State</code> under it</li>
+</ul>
+<div style="opacity: 0; height: 0; width: 0; overflow: hidden; pointer-events: auto;">
+<doc-anchor-target id="lparent-lua_state">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#lparent-lua_state">#</doc-anchor-trigger>
+        <span>L:parent(): lua_State?</span>
+    </h3>
+</doc-anchor-target>
+</div>
+<code class="language-typescript" style="text-align:center; font-size:16px; white-space:pre-wrap; word-break:break-word;">
+L:parent(): lua_State?
+</code>
+<ul>
+<li>Gets the parented <code v-pre>lua_State</code></li>
+</ul>
+<div style="opacity: 0; height: 0; width: 0; overflow: hidden; pointer-events: auto;">
+<doc-anchor-target id="lchildren-lua_state">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#lchildren-lua_state">#</doc-anchor-trigger>
+        <span>L:children(): lua_State[]</span>
+    </h3>
+</doc-anchor-target>
+</div>
+<code class="language-typescript" style="text-align:center; font-size:16px; white-space:pre-wrap; word-break:break-word;">
+L:children(): lua_State[]
+</code>
+<ul>
+<li>Gets all children associated with the <code v-pre>lua_State</code></li>
 </ul>
 <hr>
 <div style="opacity: 0; height: 0; width: 0; overflow: hidden; pointer-events: auto;">
