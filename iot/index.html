@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="turbo-root" content="/interstellar-docs">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.7.0.803127871550">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.6.0.804876174975">
 
     <!-- See retype.com -->
-    <meta name="generator" content="Retype 3.7.0">
+    <meta name="generator" content="Retype 3.6.0">
 
     <!-- Primary Meta Tags -->
     <title>iot</title>
@@ -31,12 +31,12 @@
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../resources/css/retype.css?v=3.7.0.803127871550" rel="stylesheet">
+    <link href="../resources/css/retype.css?v=3.6.0.804876174975" rel="stylesheet">
 
-    <script data-cfasync="false" src="../resources/js/config.js?v=3.7.0.803127871550" data-turbo-eval="false" defer></script>
-    <script data-cfasync="false" src="../resources/js/retype.js?v=3.7.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=3.7.0.803127871550" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../resources/js/prism.js?v=3.7.0.803127871550" defer></script>
+    <script data-cfasync="false" src="../resources/js/config.js?v=3.6.0.804876174975" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../resources/js/retype.js?v=3.6.0" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=3.6.0.804876174975" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../resources/js/prism.js?v=3.6.0.804876174975" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -107,6 +107,7 @@
             <!-- Sidebar Skeleton -->
             <div v-cloak class="fixed flex flex-col shrink-0 duration-300 ease-in-out bg-gray-100 border-gray-200 sidebar top-20 w-75 border-r h-screen md:sticky transition-transform skeleton dark:bg-dark-800 dark:border-dark-650">
             
+                <!-- Render this div, if config.showSidebarFilter is `true` -->
                 <div class="flex items-center h-16 px-6">
                     <input class="w-full h-8 px-3 py-2 transition-colors duration-200 ease-linear bg-white border border-gray-200 rounded shadow-none text-sm focus:outline-none focus:border-gray-600 dark:bg-dark-600 dark:border-dark-600" type="text" placeholder="Filter">
                 </div>
@@ -558,31 +559,33 @@ iot.opcode
 <doc-anchor-target id="serveanypath-string-callback-functionreq-serverequest-res-serveresponsefunctional-serveresponse">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#serveanypath-string-callback-functionreq-serverequest-res-serveresponsefunctional-serveresponse">#</doc-anchor-trigger>
-        <span>serve:any(path: string, callback: function(req: serve.request, res: serve.response.functional): serve.response?)</span>
+        <span>serve:any(path: string, callback?: function(req: serve.request, res: serve.response.functional): serve.response?)</span>
     </h3>
 </doc-anchor-target>
 </div>
 <code class="language-typescript" style="text-align:center; font-size:16px; white-space:pre-wrap; word-break:break-word;">
-serve:any(path: string, callback: function(req: serve.request, res: serve.response.functional): serve.response?)
+serve:any(path: string, callback?: function(req: serve.request, res: serve.response.functional): serve.response?)
 </code>
 <ul>
+<li>By inputing nothing as the callback (nil), will deleted any callbacks under the path.</li>
 <li>Any is a form of method that allows all types of methods to be seen in callback under the path.</li>
 <li>You can check the method by seeing <code v-pre>req.method</code></li>
-<li>If you set the path to <code v-pre>any</code> it will also act as a any filter, allowing you to process paths individually.</li>
+<li>If you set the path to <code v-pre>ANY</code> it will also act as a any filter, allowing you to process paths individually.</li>
 <li>Do note this is <strong>first-order</strong> making it called first before any other methods</li>
 </ul>
 <div style="opacity: 0; height: 0; width: 0; overflow: hidden; pointer-events: auto;">
 <doc-anchor-target id="servegetpath-string-callback-functionreq-serverequest-res-serveresponsefunctional-serveresponse">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#servegetpath-string-callback-functionreq-serverequest-res-serveresponsefunctional-serveresponse">#</doc-anchor-trigger>
-        <span>serve:get(path: string, callback: function(req: serve.request, res: serve.response.functional): serve.response?)</span>
+        <span>serve:get(path: string, callback?: function(req: serve.request, res: serve.response.functional): serve.response?)</span>
     </h3>
 </doc-anchor-target>
 </div>
 <code class="language-typescript" style="text-align:center; font-size:16px; white-space:pre-wrap; word-break:break-word;">
-serve:get(path: string, callback: function(req: serve.request, res: serve.response.functional): serve.response?)
+serve:get(path: string, callback?: function(req: serve.request, res: serve.response.functional): serve.response?)
 </code>
 <ul>
+<li>By inputing nothing as the callback (nil), will deleted any callbacks under the path.</li>
 <li>Adds a callback for a certain path under &quot;GET&quot; requests</li>
 <li>The GET method requests a representation of the specified resource.</li>
 <li>Requests using GET should only retrieve data and should not contain a request content.</li>
@@ -591,14 +594,15 @@ serve:get(path: string, callback: function(req: serve.request, res: serve.respon
 <doc-anchor-target id="servepostpath-string-callback-functionreq-serverequest-res-serveresponsefunctional-serveresponse">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#servepostpath-string-callback-functionreq-serverequest-res-serveresponsefunctional-serveresponse">#</doc-anchor-trigger>
-        <span>serve:post(path: string, callback: function(req: serve.request, res: serve.response.functional): serve.response?)</span>
+        <span>serve:post(path: string, callback?: function(req: serve.request, res: serve.response.functional): serve.response?)</span>
     </h3>
 </doc-anchor-target>
 </div>
 <code class="language-typescript" style="text-align:center; font-size:16px; white-space:pre-wrap; word-break:break-word;">
-serve:post(path: string, callback: function(req: serve.request, res: serve.response.functional): serve.response?)
+serve:post(path: string, callback?: function(req: serve.request, res: serve.response.functional): serve.response?)
 </code>
 <ul>
+<li>By inputing nothing as the callback (nil), will deleted any callbacks under the path.</li>
 <li>Adds a callback for a certain path under &quot;POST&quot; requests</li>
 <li>The HEAD method asks for a response identical to a GET request, but without a response body.</li>
 </ul>
@@ -606,14 +610,15 @@ serve:post(path: string, callback: function(req: serve.request, res: serve.respo
 <doc-anchor-target id="serveheadpath-string-callback-functionreq-serverequest-res-serveresponsefunctional-serveresponse">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#serveheadpath-string-callback-functionreq-serverequest-res-serveresponsefunctional-serveresponse">#</doc-anchor-trigger>
-        <span>serve:head(path: string, callback: function(req: serve.request, res: serve.response.functional): serve.response?)</span>
+        <span>serve:head(path: string, callback?: function(req: serve.request, res: serve.response.functional): serve.response?)</span>
     </h3>
 </doc-anchor-target>
 </div>
 <code class="language-typescript" style="text-align:center; font-size:16px; white-space:pre-wrap; word-break:break-word;">
-serve:head(path: string, callback: function(req: serve.request, res: serve.response.functional): serve.response?)
+serve:head(path: string, callback?: function(req: serve.request, res: serve.response.functional): serve.response?)
 </code>
 <ul>
+<li>By inputing nothing as the callback (nil), will deleted any callbacks under the path.</li>
 <li>Adds a callback for a certain path under &quot;HEAD&quot; requests</li>
 <li>The POST method submits an entity to the specified resource, often causing a change in state or side effects on the server.</li>
 </ul>
@@ -621,14 +626,15 @@ serve:head(path: string, callback: function(req: serve.request, res: serve.respo
 <doc-anchor-target id="serveputpath-string-callback-functionreq-serverequest-res-serveresponsefunctional-serveresponse">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#serveputpath-string-callback-functionreq-serverequest-res-serveresponsefunctional-serveresponse">#</doc-anchor-trigger>
-        <span>serve:put(path: string, callback: function(req: serve.request, res: serve.response.functional): serve.response?)</span>
+        <span>serve:put(path: string, callback?: function(req: serve.request, res: serve.response.functional): serve.response?)</span>
     </h3>
 </doc-anchor-target>
 </div>
 <code class="language-typescript" style="text-align:center; font-size:16px; white-space:pre-wrap; word-break:break-word;">
-serve:put(path: string, callback: function(req: serve.request, res: serve.response.functional): serve.response?)
+serve:put(path: string, callback?: function(req: serve.request, res: serve.response.functional): serve.response?)
 </code>
 <ul>
+<li>By inputing nothing as the callback (nil), will deleted any callbacks under the path.</li>
 <li>Adds a callback for a certain path under &quot;PUT&quot; requests</li>
 <li>The PUT method replaces all current representations of the target resource with the request content.</li>
 </ul>
@@ -636,14 +642,15 @@ serve:put(path: string, callback: function(req: serve.request, res: serve.respon
 <doc-anchor-target id="servedeletepath-string-callback-functionreq-serverequest-res-serveresponsefunctional-serveresponse">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#servedeletepath-string-callback-functionreq-serverequest-res-serveresponsefunctional-serveresponse">#</doc-anchor-trigger>
-        <span>serve:delete(path: string, callback: function(req: serve.request, res: serve.response.functional): serve.response?)</span>
+        <span>serve:delete(path: string, callback?: function(req: serve.request, res: serve.response.functional): serve.response?)</span>
     </h3>
 </doc-anchor-target>
 </div>
 <code class="language-typescript" style="text-align:center; font-size:16px; white-space:pre-wrap; word-break:break-word;">
-serve:delete(path: string, callback: function(req: serve.request, res: serve.response.functional): serve.response?)
+serve:delete(path: string, callback?: function(req: serve.request, res: serve.response.functional): serve.response?)
 </code>
 <ul>
+<li>By inputing nothing as the callback (nil), will deleted any callbacks under the path.</li>
 <li>Adds a callback for a certain path under &quot;DELETE&quot; requests</li>
 <li>The DELETE method deletes the specified resource.</li>
 </ul>
@@ -651,14 +658,15 @@ serve:delete(path: string, callback: function(req: serve.request, res: serve.res
 <doc-anchor-target id="serveoptionspath-string-callback-functionreq-serverequest-res-serveresponsefunctional-serveresponse">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#serveoptionspath-string-callback-functionreq-serverequest-res-serveresponsefunctional-serveresponse">#</doc-anchor-trigger>
-        <span>serve:options(path: string, callback: function(req: serve.request, res: serve.response.functional): serve.response?)</span>
+        <span>serve:options(path: string, callback?: function(req: serve.request, res: serve.response.functional): serve.response?)</span>
     </h3>
 </doc-anchor-target>
 </div>
 <code class="language-typescript" style="text-align:center; font-size:16px; white-space:pre-wrap; word-break:break-word;">
-serve:options(path: string, callback: function(req: serve.request, res: serve.response.functional): serve.response?)
+serve:options(path: string, callback?: function(req: serve.request, res: serve.response.functional): serve.response?)
 </code>
 <ul>
+<li>By inputing nothing as the callback (nil), will deleted any callbacks under the path.</li>
 <li>Adds a callback for a certain path under &quot;OPTIONS&quot; requests</li>
 <li>The OPTIONS method describes the communication options for the target resource.</li>
 </ul>
