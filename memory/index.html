@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="turbo-root" content="/interstellar-docs">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.11.0.808463789938">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.11.0.809570041083">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.11.0">
@@ -31,12 +31,12 @@
 
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
-    <link href="../resources/css/retype.css?v=3.11.0.808463789938" rel="stylesheet">
+    <link href="../resources/css/retype.css?v=3.11.0.809570041083" rel="stylesheet">
 
-    <script data-cfasync="false" src="../resources/js/config.js?v=3.11.0.808463789938" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../resources/js/config.js?v=3.11.0.809570041083" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../resources/js/retype.js?v=3.11.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=3.11.0.808463789938" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../resources/js/prism.js?v=3.11.0.808463789938" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=3.11.0.809570041083" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../resources/js/prism.js?v=3.11.0.809570041083" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -226,6 +226,20 @@ memory.address(value: number | string | function | userdata): memory.address
 <li>Creates a new address class.</li>
 <li>Using a string will attempt for format a hex-string to address.</li>
 <li>Using cfunctions or userdata retrives their absolute location in memory.</li>
+</ul>
+<div style="opacity: 0; height: 0; width: 0; overflow: hidden; pointer-events: auto;">
+<doc-anchor-target id="memoryallocatesize-number-memoryaddress">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#memoryallocatesize-number-memoryaddress">#</doc-anchor-trigger>
+        <span>memory.allocate(size: number): memory.address</span>
+    </h3>
+</doc-anchor-target>
+</div>
+<code class="language-typescript" style="text-align:center; font-size:16px; white-space:pre-wrap; word-break:break-word;">
+memory.allocate(size: number): memory.address
+</code>
+<ul>
+<li>Allocates a fixed size of memory in heap.</li>
 </ul>
 <div style="opacity: 0; height: 0; width: 0; overflow: hidden; pointer-events: auto;">
 <doc-anchor-target id="memorymodulename-string-memorymodule">
@@ -970,6 +984,310 @@ memory.scan.address(input: memory.address, start?: memory.module | memory.region
 </code>
 <ul>
 <li>Attempts to scan for a certain <code v-pre>void*</code> value.</li>
+</ul>
+<div style="opacity: 0; height: 0; width: 0; overflow: hidden; pointer-events: auto;">
+<doc-anchor-target id="memorysubroutineblank-memoryaddress">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#memorysubroutineblank-memoryaddress">#</doc-anchor-trigger>
+        <span>memory.subroutine.blank(): memory.address</span>
+    </h3>
+</doc-anchor-target>
+</div>
+<p><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-badge-secondary-text bg-badge-secondary border border-badge-secondary-border h-6 px-2 text-xs rounded-md">
+    <span>stub</span>
+</span> <code class="language-typescript" style="text-align:center; font-size:16px; white-space:pre-wrap; word-break:break-word;">
+memory.subroutine.blank(): memory.address
+</code></p>
+<ul>
+<li>Creates a blank subroutine that does nothing.</li>
+<li>This is created in heap, therefore it will increase memory.</li>
+</ul>
+<div style="opacity: 0; height: 0; width: 0; overflow: hidden; pointer-events: auto;">
+<doc-anchor-target id="memorysubroutineboolvalue-boolean-memoryaddress">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#memorysubroutineboolvalue-boolean-memoryaddress">#</doc-anchor-trigger>
+        <span>memory.subroutine.bool(value: boolean): memory.address</span>
+    </h3>
+</doc-anchor-target>
+</div>
+<p><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-badge-secondary-text bg-badge-secondary border border-badge-secondary-border h-6 px-2 text-xs rounded-md">
+    <span>stub</span>
+</span> <code class="language-typescript" style="text-align:center; font-size:16px; white-space:pre-wrap; word-break:break-word;">
+memory.subroutine.bool(value: boolean): memory.address
+</code></p>
+<ul>
+<li>Creates a blank subroutine which only returns a boolean.</li>
+<li>This is created in heap, therefore it will increase memory.</li>
+</ul>
+<div style="opacity: 0; height: 0; width: 0; overflow: hidden; pointer-events: auto;">
+<doc-anchor-target id="memorysubroutinecharvalue-number-memoryaddress">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#memorysubroutinecharvalue-number-memoryaddress">#</doc-anchor-trigger>
+        <span>memory.subroutine.char(value: number): memory.address</span>
+    </h3>
+</doc-anchor-target>
+</div>
+<p><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-badge-secondary-text bg-badge-secondary border border-badge-secondary-border h-6 px-2 text-xs rounded-md">
+    <span>stub</span>
+</span> <code class="language-typescript" style="text-align:center; font-size:16px; white-space:pre-wrap; word-break:break-word;">
+memory.subroutine.char(value: number): memory.address
+</code></p>
+<ul>
+<li>Creates a blank subroutine which only returns a character.</li>
+<li>This is created in heap, therefore it will increase memory.</li>
+</ul>
+<div style="opacity: 0; height: 0; width: 0; overflow: hidden; pointer-events: auto;">
+<doc-anchor-target id="memorysubroutineucharvalue-number-memoryaddress">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#memorysubroutineucharvalue-number-memoryaddress">#</doc-anchor-trigger>
+        <span>memory.subroutine.uchar(value: number): memory.address</span>
+    </h3>
+</doc-anchor-target>
+</div>
+<p><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-badge-secondary-text bg-badge-secondary border border-badge-secondary-border h-6 px-2 text-xs rounded-md">
+    <span>stub</span>
+</span> <code class="language-typescript" style="text-align:center; font-size:16px; white-space:pre-wrap; word-break:break-word;">
+memory.subroutine.uchar(value: number): memory.address
+</code></p>
+<ul>
+<li>Creates a blank subroutine which only returns a unsigned character.</li>
+<li>This is created in heap, therefore it will increase memory.</li>
+</ul>
+<div style="opacity: 0; height: 0; width: 0; overflow: hidden; pointer-events: auto;">
+<doc-anchor-target id="memorysubroutineshortvalue-number-memoryaddress">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#memorysubroutineshortvalue-number-memoryaddress">#</doc-anchor-trigger>
+        <span>memory.subroutine.short(value: number): memory.address</span>
+    </h3>
+</doc-anchor-target>
+</div>
+<p><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-badge-secondary-text bg-badge-secondary border border-badge-secondary-border h-6 px-2 text-xs rounded-md">
+    <span>stub</span>
+</span> <code class="language-typescript" style="text-align:center; font-size:16px; white-space:pre-wrap; word-break:break-word;">
+memory.subroutine.short(value: number): memory.address
+</code></p>
+<ul>
+<li>Creates a blank subroutine which only returns a short.</li>
+<li>This is created in heap, therefore it will increase memory.</li>
+</ul>
+<div style="opacity: 0; height: 0; width: 0; overflow: hidden; pointer-events: auto;">
+<doc-anchor-target id="memorysubroutineushortvalue-number-memoryaddress">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#memorysubroutineushortvalue-number-memoryaddress">#</doc-anchor-trigger>
+        <span>memory.subroutine.ushort(value: number): memory.address</span>
+    </h3>
+</doc-anchor-target>
+</div>
+<p><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-badge-secondary-text bg-badge-secondary border border-badge-secondary-border h-6 px-2 text-xs rounded-md">
+    <span>stub</span>
+</span> <code class="language-typescript" style="text-align:center; font-size:16px; white-space:pre-wrap; word-break:break-word;">
+memory.subroutine.ushort(value: number): memory.address
+</code></p>
+<ul>
+<li>Creates a blank subroutine which only returns a unsigned short.</li>
+<li>This is created in heap, therefore it will increase memory.</li>
+</ul>
+<div style="opacity: 0; height: 0; width: 0; overflow: hidden; pointer-events: auto;">
+<doc-anchor-target id="memorysubroutineintvalue-number-memoryaddress">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#memorysubroutineintvalue-number-memoryaddress">#</doc-anchor-trigger>
+        <span>memory.subroutine.int(value: number): memory.address</span>
+    </h3>
+</doc-anchor-target>
+</div>
+<p><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-badge-secondary-text bg-badge-secondary border border-badge-secondary-border h-6 px-2 text-xs rounded-md">
+    <span>stub</span>
+</span> <code class="language-typescript" style="text-align:center; font-size:16px; white-space:pre-wrap; word-break:break-word;">
+memory.subroutine.int(value: number): memory.address
+</code></p>
+<ul>
+<li>Creates a blank subroutine which only returns a integer.</li>
+<li>This is created in heap, therefore it will increase memory.</li>
+</ul>
+<div style="opacity: 0; height: 0; width: 0; overflow: hidden; pointer-events: auto;">
+<doc-anchor-target id="memorysubroutineuintvalue-number-memoryaddress">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#memorysubroutineuintvalue-number-memoryaddress">#</doc-anchor-trigger>
+        <span>memory.subroutine.uint(value: number): memory.address</span>
+    </h3>
+</doc-anchor-target>
+</div>
+<p><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-badge-secondary-text bg-badge-secondary border border-badge-secondary-border h-6 px-2 text-xs rounded-md">
+    <span>stub</span>
+</span> <code class="language-typescript" style="text-align:center; font-size:16px; white-space:pre-wrap; word-break:break-word;">
+memory.subroutine.uint(value: number): memory.address
+</code></p>
+<ul>
+<li>Creates a blank subroutine which only returns a unsigned integer.</li>
+<li>This is created in heap, therefore it will increase memory.</li>
+</ul>
+<div style="opacity: 0; height: 0; width: 0; overflow: hidden; pointer-events: auto;">
+<doc-anchor-target id="memorysubroutinelongvalue-number-memoryaddress">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#memorysubroutinelongvalue-number-memoryaddress">#</doc-anchor-trigger>
+        <span>memory.subroutine.long(value: number): memory.address</span>
+    </h3>
+</doc-anchor-target>
+</div>
+<p><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-badge-secondary-text bg-badge-secondary border border-badge-secondary-border h-6 px-2 text-xs rounded-md">
+    <span>stub</span>
+</span> <code class="language-typescript" style="text-align:center; font-size:16px; white-space:pre-wrap; word-break:break-word;">
+memory.subroutine.long(value: number): memory.address
+</code></p>
+<ul>
+<li>Creates a blank subroutine which only returns a long.</li>
+<li>This is created in heap, therefore it will increase memory.</li>
+</ul>
+<div style="opacity: 0; height: 0; width: 0; overflow: hidden; pointer-events: auto;">
+<doc-anchor-target id="memorysubroutineulongvalue-number-memoryaddress">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#memorysubroutineulongvalue-number-memoryaddress">#</doc-anchor-trigger>
+        <span>memory.subroutine.ulong(value: number): memory.address</span>
+    </h3>
+</doc-anchor-target>
+</div>
+<p><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-badge-secondary-text bg-badge-secondary border border-badge-secondary-border h-6 px-2 text-xs rounded-md">
+    <span>stub</span>
+</span> <code class="language-typescript" style="text-align:center; font-size:16px; white-space:pre-wrap; word-break:break-word;">
+memory.subroutine.ulong(value: number): memory.address
+</code></p>
+<ul>
+<li>Creates a blank subroutine which only returns a unsigned long.</li>
+<li>This is created in heap, therefore it will increase memory.</li>
+</ul>
+<div style="opacity: 0; height: 0; width: 0; overflow: hidden; pointer-events: auto;">
+<doc-anchor-target id="memorysubroutinefloatvalue-number-memoryaddress">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#memorysubroutinefloatvalue-number-memoryaddress">#</doc-anchor-trigger>
+        <span>memory.subroutine.float(value: number): memory.address</span>
+    </h3>
+</doc-anchor-target>
+</div>
+<p><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-badge-secondary-text bg-badge-secondary border border-badge-secondary-border h-6 px-2 text-xs rounded-md">
+    <span>stub</span>
+</span> <code class="language-typescript" style="text-align:center; font-size:16px; white-space:pre-wrap; word-break:break-word;">
+memory.subroutine.float(value: number): memory.address
+</code></p>
+<ul>
+<li>Creates a blank subroutine which only returns a float.</li>
+<li>This is created in heap, therefore it will increase memory.</li>
+</ul>
+<div style="opacity: 0; height: 0; width: 0; overflow: hidden; pointer-events: auto;">
+<doc-anchor-target id="memorysubroutinedoublevalue-number-memoryaddress">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#memorysubroutinedoublevalue-number-memoryaddress">#</doc-anchor-trigger>
+        <span>memory.subroutine.double(value: number): memory.address</span>
+    </h3>
+</doc-anchor-target>
+</div>
+<p><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-badge-secondary-text bg-badge-secondary border border-badge-secondary-border h-6 px-2 text-xs rounded-md">
+    <span>stub</span>
+</span> <code class="language-typescript" style="text-align:center; font-size:16px; white-space:pre-wrap; word-break:break-word;">
+memory.subroutine.double(value: number): memory.address
+</code></p>
+<ul>
+<li>Creates a blank subroutine which only returns a double.</li>
+<li>This is created in heap, therefore it will increase memory.</li>
+</ul>
+<div style="opacity: 0; height: 0; width: 0; overflow: hidden; pointer-events: auto;">
+<doc-anchor-target id="memorysubroutinesequencehex-string-memoryaddress">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#memorysubroutinesequencehex-string-memoryaddress">#</doc-anchor-trigger>
+        <span>memory.subroutine.sequence(hex: string): memory.address</span>
+    </h3>
+</doc-anchor-target>
+</div>
+<p><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-badge-secondary-text bg-badge-secondary border border-badge-secondary-border h-6 px-2 text-xs rounded-md">
+    <span>stub</span>
+</span> <code class="language-typescript" style="text-align:center; font-size:16px; white-space:pre-wrap; word-break:break-word;">
+memory.subroutine.sequence(hex: string): memory.address
+</code></p>
+<ul>
+<li>Creates a subroutine from a sequence.</li>
+<li>This is created in heap, therefore it will increase memory.</li>
+</ul>
+<div style="opacity: 0; height: 0; width: 0; overflow: hidden; pointer-events: auto;">
+<doc-anchor-target id="memorysubroutineinvokercallback-function-memoryaddress">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#memorysubroutineinvokercallback-function-memoryaddress">#</doc-anchor-trigger>
+        <span>memory.subroutine.invoker(callback: function): memory.address</span>
+    </h3>
+</doc-anchor-target>
+</div>
+<p><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-badge-secondary-text bg-badge-secondary border border-badge-secondary-border h-6 px-2 text-xs rounded-md">
+    <span>stub</span>
+</span> <code class="language-typescript" style="text-align:center; font-size:16px; white-space:pre-wrap; word-break:break-word;">
+memory.subroutine.invoker(callback: function): memory.address
+</code></p>
+<ul>
+<li>Creates a subroutine that invokes a lua callback.</li>
+<li>Do note this doesn&#x27;t allow returns or parameters (yet).</li>
+<li>This is created in heap, therefore it will increase memory.</li>
+</ul>
+<div style="opacity: 0; height: 0; width: 0; overflow: hidden; pointer-events: auto;">
+<doc-anchor-target id="memoryjumphookloc-memoryaddress-target-memoryaddress--function-boolean">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#memoryjumphookloc-memoryaddress-target-memoryaddress--function-boolean">#</doc-anchor-trigger>
+        <span>memory.jump.hook(loc: memory.address, target: memory.address | function): boolean</span>
+    </h3>
+</doc-anchor-target>
+</div>
+<p><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-badge-secondary-text bg-badge-secondary border border-badge-secondary-border h-6 px-2 text-xs rounded-md">
+    <span>stub</span>
+</span> <code class="language-typescript" style="text-align:center; font-size:16px; white-space:pre-wrap; word-break:break-word;">
+memory.jump.hook(loc: memory.address, target: memory.address | function): boolean
+</code></p>
+<ul>
+<li>Creates an unconditional jump to an address in a specified location.</li>
+<li>If a function is passed it will use <code v-pre>memory.subroutine.invoker</code>.</li>
+</ul>
+<div style="opacity: 0; height: 0; width: 0; overflow: hidden; pointer-events: auto;">
+<doc-anchor-target id="memoryjumpunhookloc-memoryaddress-boolean">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#memoryjumpunhookloc-memoryaddress-boolean">#</doc-anchor-trigger>
+        <span>memory.jump.unhook(loc: memory.address): boolean</span>
+    </h3>
+</doc-anchor-target>
+</div>
+<p><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-badge-secondary-text bg-badge-secondary border border-badge-secondary-border h-6 px-2 text-xs rounded-md">
+    <span>stub</span>
+</span> <code class="language-typescript" style="text-align:center; font-size:16px; white-space:pre-wrap; word-break:break-word;">
+memory.jump.unhook(loc: memory.address): boolean
+</code></p>
+<ul>
+<li>Removes and restores a specified location from an unconditional jump.</li>
+</ul>
+<div style="opacity: 0; height: 0; width: 0; overflow: hidden; pointer-events: auto;">
+<doc-anchor-target id="memoryjumplist-memoryaddress">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#memoryjumplist-memoryaddress">#</doc-anchor-trigger>
+        <span>memory.jump.list(): memory.address[]</span>
+    </h3>
+</doc-anchor-target>
+</div>
+<p><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-badge-secondary-text bg-badge-secondary border border-badge-secondary-border h-6 px-2 text-xs rounded-md">
+    <span>stub</span>
+</span> <code class="language-typescript" style="text-align:center; font-size:16px; white-space:pre-wrap; word-break:break-word;">
+memory.jump.list(): memory.address[]
+</code></p>
+<ul>
+<li>Gives a list of memory addresses that have been hooked using jump.</li>
+</ul>
+<div style="opacity: 0; height: 0; width: 0; overflow: hidden; pointer-events: auto;">
+<doc-anchor-target id="memoryjumpgetloc-memoryaddress-memoryaddress">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#memoryjumpgetloc-memoryaddress-memoryaddress">#</doc-anchor-trigger>
+        <span>memory.jump.get(loc: memory.address): memory.address?</span>
+    </h3>
+</doc-anchor-target>
+</div>
+<p><span class="no-link inline-flex align-middle items-center justify-center font-medium leading-none whitespace-nowrap text-badge-secondary-text bg-badge-secondary border border-badge-secondary-border h-6 px-2 text-xs rounded-md">
+    <span>stub</span>
+</span> <code class="language-typescript" style="text-align:center; font-size:16px; white-space:pre-wrap; word-break:break-word;">
+memory.jump.get(loc: memory.address): memory.address?
+</code></p>
+<ul>
+<li>Gets the memory address that the jump is targeting.</li>
 </ul>
 <div hidden>
 <div class="codeblock-wrapper"><doc-codeblock>
